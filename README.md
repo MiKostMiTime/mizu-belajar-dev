@@ -39,6 +39,7 @@ AI/Vibe-Coders bisa:              Kamu harus bisa (yang AI TIDAK bisa):
 | **Terminal** | iTerm2 |
 | **Browser** | Brave (Chromium — full DevTools) + Safari (cross-browser testing) |
 | **CS Fundamentals** | ✅ Sudah punya dari persiapan OSN (algoritma, data structures, problem solving) |
+| **Database GUI** | DataGrip (gratis via GitHub Student / JetBrains) |
 | **ML on device** | Create ML |
 
 ---
@@ -62,7 +63,7 @@ ssh-keygen -t ed25519 -C "YOUR_EMAIL@example.com"
 
 # 5. Useful tools (install sesuai fase)
 brew install --cask docker        # Fase 4
-brew install --cask tableplus     # Fase 4
+brew install --cask datagrip      # Fase 4 (gratis via GitHub Student / JetBrains)
 brew install --cask sf-symbols    # Fase 3
 brew install --cask bruno         # Fase 4
 
