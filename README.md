@@ -71,6 +71,19 @@ brew install --cask bruno         # Fase 4
 node --version && npm --version && git --version && python3 --version
 ```
 
+### 💡 Kenapa DataGrip, bukan TablePlus?
+
+| | TablePlus | DataGrip |
+|-|-----------|----------|
+| **Harga** | Berbayar (trial sangat terbatas — max 2 tab, tidak bisa filter, dll) | **Gratis** via [GitHub Student Developer Pack](https://education.github.com/pack) / JetBrains Education |
+| **Ekosistem** | Standalone, tidak terintegrasi dengan IDE | Satu ekosistem dengan PHPStorm — shortcut, tema, dan settings yang konsisten |
+| **Database support** | PostgreSQL, MySQL, SQLite, dll | PostgreSQL, MySQL, SQLite, MongoDB, Redis, dan banyak lagi |
+| **Query editor** | Basic | Full IDE — autocomplete, refactor, explain plan, version control |
+| **Data export/import** | Terbatas di trial | Penuh — CSV, JSON, SQL dump, dll |
+| **ER Diagram** | ❌ | ✅ Bisa generate diagram dari schema langsung |
+
+> **TL;DR:** DataGrip = database IDE yang sebenarnya. TablePlus bagus, tapi trial-nya terlalu terbatas untuk belajar. Karena kamu sudah punya akses JetBrains lewat GitHub Student, DataGrip adalah pilihan paling masuk akal di stack ini.
+
 ### PHPStorm Plugins:
 - GitHub Copilot, Tailwind CSS, Prettier, ESLint, Prisma, .env files support, GitToolBox
 
