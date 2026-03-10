@@ -73,6 +73,34 @@ node --version && npm --version && git --version && python3 --version
 ### PHPStorm Plugins:
 - GitHub Copilot, Tailwind CSS, Prettier, ESLint, Prisma, .env files support, GitToolBox
 
+> ⚠️ **Catatan ESLint:** PHPStorm's ESLint plugin **membutuhkan ESLint npm package** yang di-install di dalam project. Tanpa package-nya, plugin tidak bisa berjalan. Install ESLint sebagai dev dependency di **setiap** JavaScript/TypeScript project.
+
+### ESLint Setup (wajib di setiap JS/TS project):
+```bash
+# Install ESLint sebagai dev dependency
+npm install --save-dev eslint
+
+# Inisialisasi konfigurasi ESLint
+npx eslint --init
+```
+
+Pilihan saat `eslint --init`:
+- ✅ **How would you like to use ESLint?** → `To check syntax, find problems, and enforce code style`
+- ✅ **What type of modules?** → `JavaScript modules (import/export)` untuk project modern / `CommonJS` untuk Node.js
+- ✅ **Which framework?** → sesuaikan (React / None)
+- ✅ **Does your project use TypeScript?** → Yes/No sesuai project
+- ✅ **Where does your code run?** → Browser / Node sesuai project
+
+Setelah setup, tambahkan script ke `package.json`:
+```json
+"scripts": {
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix"
+}
+```
+
+Kemudian di PHPStorm: **Settings → Languages & Frameworks → JavaScript → Code Quality Tools → ESLint** → pilih **Automatic ESLint configuration** agar PHPStorm otomatis deteksi dari `node_modules`.
+
 ### Workspace Structure:
 ```
 📁 ~/Developer/
