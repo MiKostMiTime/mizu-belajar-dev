@@ -34,30 +34,68 @@ REVISED:
 
 ---
 
-# 🎓 YEAR 1: FOUNDATION + PRODUCTION APPS (你现在 - 1 Tahun)
+# 🎓 YEAR 1: FOUNDATION + PRODUCTION APPS (Sekarang - 52 Minggu)
 
 > **Intensive learning phase sebelum masuk university. Fokus: BUILD THINGS THAT WORK.**
+
+### ⚡️ Flexibility Disclaimer
+
+```
+TIMELINE INI BUKAN HARD DEADLINE — INI GUIDELINE.
+
+Prinsip:
+├── ❌ "Harus selesai minggu 13" → ✅ "Se口中 selesai quando estiver pronto"
+├── ❌ "Telat 2 minggu = gagal" → ✅ "Telat 2 minggu = adjust target"
+├── ❌ "Tidak bisa skip minggu" → ✅ "Pahami concepts, tidak harus berurutan"
+└── ❌ "1 minggu = 1 minggu" → ✅ "1 phase = ~13 minggu, ±2 minggu acceptable"
+
+Yang PENTING:
+1. Paham Konsep (understanding) > tepat Waktu (schedule)
+2. working Project > banyak tutorial
+3. Consistency > intensity
+4. Ada 52 minggu — 2-3 minggu buffer itu normal
+
+Realistis:
+├── Week 1-13 (Web): bisa memakan 10-16 minggu tergantung depth
+├── Week 14-26 (Mobile): bisa memakan 12-18 minggu
+├── Week 27-39 (Backend+AI): bisa memakan 10-15 minggu
+└── TOTAL: 40-60 minggu masih on track
+
+If kamu butuh 18 bulan, bukan berarti gagal.
+If kamu selesai 9 bulan, justru lebih baik dari expected.
+```
 
 ## 📊 Phase Overview
 
 ```
-Bulan 1-3:  Web Full-Stack (React/Next.js)
-Bulan 4-6:  Mobile Development (iOS SwiftUI + Android React Native)
-Bulan 7-9:  Backend Engineering + AI Integration
-Bulan 10-12: Capstone Projects + Portfolio + University Prep
+Minggu 1-13:    Web Full-Stack (React/Next.js)
+Minggu 14-26:   Mobile Development (React Native + SwiftUI)
+Minggu 27-39:   Backend Engineering + AI Integration
+Minggu 40-50:   Capstone Projects + Portfolio
+Minggu 51-52:   Buffer/Rest + Year 2 Planning
 ```
+
+### 📅 52-Week Calendar View
+
+| Phase | Minggu | Durasi | Fokus |
+|-------|--------|--------|-------|
+| **Phase 1** | 1-13 | 13 minggu | Web Full-Stack |
+| **Phase 2** | 14-26 | 13 minggu | Mobile Development |
+| **Phase 3** | 27-39 | 13 minggu | Backend + AI |
+| **Phase 4** | 40-50 | 11 minggu | Capstones + Portfolio |
+| **Buffer** | 51-52 | 2 minggu | Rest + Year 2 Prep |
 
 ---
 
-## 🟢 PHASE 1A: MODERN WEB DEVELOPMENT (Bulan 1-3)
+## 🟢 PHASE 1A: MODERN WEB DEVELOPMENT (Minggu 1-13)
 
 ### 🎯 Goal: Master React ecosystem + deploy production apps
 
 ### Week-by-Week Breakdown:
 
-| Week | Topic | Project | Deliverable |
-|------|-------|---------|-------------|
-| **1** | HTML5 Semantic + CSS3 Modern | Personal landing page | Live site |
+| Minggu | Topik | Project | Deliverable |
+|--------|-------|---------|-------------|
+| **1** | HTML5 Semantic + CSS3 Modern | Personal landing page | Live site di GitHub Pages |
 | **2** | CSS: Flexbox, Grid, Custom Properties | Responsive dashboard layout | Browser-tested |
 | **3** | JavaScript ES2024+ Deep | Console tools + DOM basics | Interactive UI |
 | **4** | React Fundamentals | Component library (10 atoms) | Storybook-style docs |
@@ -68,7 +106,8 @@ Bulan 10-12: Capstone Projects + Portfolio + University Prep
 | **9** | Server Actions + Database | Blog dengan Prisma + PostgreSQL | CRUD working |
 | **10** | Authentication + Security | Full auth flow (NextAuth + JWT) | Secure app |
 | **11** | Tailwind CSS v4 + shadcn/ui | Redesign semua apps | Polished UI |
-| **12** | Testing + Deployment | CI/CD pipeline | Auto-deploy green |
+| **12** | Testing + CI/CD | Unit tests + integration tests | 80%+ coverage |
+| **13** | **Phase 1 Review** + Portfolio | Rapikan semua project + writeup | Phase 1 complete |
 
 ### 🔗 Resources Updated 2026:
 
@@ -98,7 +137,7 @@ Bulan 10-12: Capstone Projects + Portfolio + University Prep
 
 ---
 
-## 🔵 PHASE 1B: MOBILE DEVELOPMENT (Bulan 4-6)
+## 🔵 PHASE 1B: MOBILE DEVELOPMENT (Minggu 14-26)
 
 ### 🎯 Goal: Ship apps ke iOS App Store dan Google Play Store
 
@@ -119,25 +158,26 @@ ARGUMEN UNTUK SWIFTUI (tetap belajar, Phase 3):
 
 ### Week-by-Week: React Native + Expo
 
-| Week | Topic | Project | Deliverable |
-|------|-------|---------|-------------|
-| **13** | React Native Fundamentals + Expo | "Hello World" di simulator | App running |
-| **14** | Core Components + Navigation | Multi-screen app dengan React Navigation | Navigasi works |
-| **15** | State Management (Zustand/Redux Toolkit) | Shopping cart dengan state management | State persistent |
-| **16** | Native Modules + Device APIs | Camera + Image picker app | Camera access |
-| **17** | REST API + GraphQL | News reader app dengan API | Real data |
-| **18** | Push Notifications + Offline | Todo app dengan background sync | Notifications work |
-| **19** | App Store deployment | Build + submit ke TestFlight + Google Play | Apps submitted |
-| **20** | App Store Optimization (ASO) | Research + keywords + screenshots | Optimized listing |
+| Minggu | Topik | Project | Deliverable |
+|--------|-------|---------|-------------|
+| **14** | React Native Fundamentals + Expo | "Hello World" di simulator | App running |
+| **15** | Core Components + Navigation | Multi-screen app dengan React Navigation | Navigasi works |
+| **16** | State Management (Zustand/Redux Toolkit) | Shopping cart dengan state management | State persistent |
+| **17** | Native Modules + Device APIs | Camera + Image picker app | Camera access |
+| **18** | REST API + GraphQL | News reader app dengan API | Real data |
+| **19** | Push Notifications + Offline | Todo app dengan background sync | Notifications work |
+| **20** | App Store deployment | Build + submit ke TestFlight + Google Play | Apps submitted |
+| **21** | App Store Optimization (ASO) | Research + keywords + screenshots | Optimized listing |
 
 ### Week-by-Week: SwiftUI (Bonus untuk Apple Ecosystem)
 
-| Week | Topic | Project | Deliverable |
-|------|-------|---------|-------------|
-| **21** | Swift + Xcode basics | Swift Playgrounds | Swift熟练 |
-| **22** | SwiftUI Fundamentals | "Hello World" di simulator | SwiftUI app |
-| **23** | Views, Stacks, State | Resume builder app | UI working |
-| **24** | Data persistence (SwiftData) | Journal app | Local storage |
+| Minggu | Topik | Project | Deliverable |
+|--------|-------|---------|-------------|
+| **22** | Swift + Xcode basics | Swift Playgrounds | Swift熟练 |
+| **23** | SwiftUI Fundamentals | "Hello World" di simulator | SwiftUI app |
+| **24** | Views, Stacks, State | Resume builder app | UI working |
+| **25** | Data persistence (SwiftData) | Journal app | Local storage |
+| **26** | **Phase 2 Review** + Integration | Combine RN + SwiftUI learnings | Phase 2 complete |
 
 ### 📱 Impact Project Ideas (Universities LOVE these):
 
@@ -170,7 +210,7 @@ TIER 3: Portfolio Showpieces
 
 ---
 
-## 🟣 PHASE 1C: BACKEND ENGINEERING + AI INTEGRATION (Bulan 7-9)
+## 🟣 PHASE 1C: BACKEND ENGINEERING + AI INTEGRATION (Minggu 27-39)
 
 ### 🎯 Goal: Build production-grade backend + integrate AI meaningfully
 
@@ -190,27 +230,26 @@ KENAPA TIDAK DI AWAL:
 
 ### Week-by-Week: Backend Engineering
 
-| Week | Topic | Project | Deliverable |
-|------|-------|---------|-------------|
-| **25** | Node.js Deep Dive | CLI tool (file organizer) | npm package published |
-| **26** | Express.js + REST API Design | REST API for mobile app | Full CRUD API |
-| **27** | PostgreSQL + Prisma | Database schema + migrations | Production DB |
-| **28** | Authentication (JWT + Refresh Tokens) | Secure auth system | Login/register works |
-| **29** | Caching + Performance | Redis caching layer | 10x faster queries |
-| **30** | Docker + Containerization | Dockerize full-stack app | docker-compose up works |
-| **31** | CI/CD + GitHub Actions | Pipeline: lint → test → deploy | Auto-deploy |
-| **32** | Monitoring + Observability | Logging + error tracking (Sentry) | Alerts working |
+| Minggu | Topik | Project | Deliverable |
+|--------|-------|---------|-------------|
+| **27** | Node.js Deep Dive | CLI tool (file organizer) | npm package published |
+| **28** | Express.js + REST API Design | REST API for mobile app | Full CRUD API |
+| **29** | PostgreSQL + Prisma | Database schema + migrations | Production DB |
+| **30** | Authentication (JWT + Refresh Tokens) | Secure auth system | Login/register works |
+| **31** | Caching + Performance | Redis caching layer | 10x faster queries |
+| **32** | Docker + Containerization | Dockerize full-stack app | docker-compose up works |
+| **33** | CI/CD + GitHub Actions | Pipeline: lint → test → deploy | Auto-deploy |
+| **34** | Monitoring + Observability | Logging + error tracking (Sentry) | Alerts working |
 
 ### Week-by-Week: AI Integration (Practical, Not Just API Calls)
 
-| Week | Topic | Project | Deliverable |
-|------|-------|---------|-------------|
-| **33** | AI Fundamentals + Prompt Engineering | Build CLI AI assistant | Working AI tool |
-| **34** | OpenAI API + Function Calling | Study assistant dengan AI tutoring | AI features |
-| **35** | Vector Databases + RAG | Private knowledge base app | Rag pipeline |
-| **36** | Local AI + Ollama | Offline AI assistant app | Works offline |
-| **37** | Computer Vision + Image AI | Photo tagging + search app | CV integration |
-| **38** | Fine-tuning + Transfer Learning | Custom model untuk use case | Fine-tuned model |
+| Minggu | Topik | Project | Deliverable |
+|--------|-------|---------|-------------|
+| **35** | AI Fundamentals + Prompt Engineering | Build CLI AI assistant | Working AI tool |
+| **36** | OpenAI API + Function Calling | Study assistant dengan AI tutoring | AI features |
+| **37** | Vector Databases + RAG | Private knowledge base app | RAG pipeline |
+| **38** | Local AI + Ollama | Offline AI assistant app | Works offline |
+| **39** | **Phase 3 Review** + Integration | Connect all pieces together | Phase 3 complete |
 
 ### 📚 AI Resources (Updated 2026):
 
@@ -242,9 +281,21 @@ YANG KAMU HARUS Kuasai:
 
 ---
 
-## 🟠 PHASE 1D: CAPSTONE PROJECTS + PORTFOLIO (Bulan 10-12)
+## 🟠 PHASE 1D: CAPSTONE PROJECTS + PORTFOLIO (Minggu 40-50)
 
 ### 🎯 Goal: Ship 3 capstone projects yang compelling untuk university applications
+
+### Week-by-Week Breakdown:
+
+| Minggu | Fokus | Aktivitas | Deliverable |
+|--------|-------|-----------|-------------|
+| **40** | Capstone Planning | Pilih 1-2 capstone + buat SPEC.md | SPEC document |
+| **41-42** | Capstone 1: Build | Core features + MVP | MVP launched |
+| **43-44** | Capstone 1: Polish | Testing + CI/CD + polish | Production ready |
+| **45-46** | Capstone 2: Build | Core features + MVP | MVP launched |
+| **47-48** | Capstone 2: Polish + Capstone 3 Start | Testing + polish + plan #3 | Cap 2 done, Cap 3 started |
+| **49-50** | Capstone 3 + Portfolio | Final capstone + portfolio writeup | All 3 capstones + portfolio |
+| **51-52** | **BUFFER: Rest + Year 2 Planning** | Review + plan next year | Ready for Year 2 |
 
 ### 🏆 Capstone Project Tiering:
 
