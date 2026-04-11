@@ -251,15 +251,31 @@ KENAPA TIDAK DI AWAL:
 | **38** | Local AI + Ollama | Offline AI assistant app | Works offline |
 | **39** | **Phase 3 Review** + Integration | Connect all pieces together | Phase 3 complete |
 
-### 📚 AI Resources (Updated 2026):
+### 📚 AI Resources (Updated 2026, Free-First + No Overload):
 
-| Resource | URL | Why Essential |
-|----------|-----|---------------|
-| **Google ML Crash Course** | developers.google.com/machine-learning | Free, high quality |
-| **Hugging Face Course** | huggingface.co/learn | transformers + diffusers |
-| **LangChain Academy** | langchain.academy | LLM app development |
-| **Fast.ai** | fast.ai | Practical deep learning |
-| **Chip Huyen's ML Book** | github.com/chiphuyen/machine-learning-systems-design | System design for ML |
+| Priority | Resource | URL | Why Essential |
+|----------|----------|-----|---------------|
+| **Core 1** | **Google ML Crash Course** | developers.google.com/machine-learning | Free, strong fundamentals |
+| **Core 2** | **Hugging Face Course** | huggingface.co/learn | Modern LLM/transformers workflows |
+| **Core 3** | **Kaggle Learn** | kaggle.com/learn | Hands-on practice with real datasets |
+| **Core 4** | **Made With ML** | madewithml.com | End-to-end practical ML systems |
+| **Optional** | **LangChain Academy** | langchain.academy | Useful when building LLM apps/RAG in production |
+| **Optional** | **Fast.ai** | fast.ai | Optional deep learning track after Core 1-4 |
+| **Optional** | **Chip Huyen's ML Book** | github.com/chiphuyen/machine-learning-systems-design | ML system design depth |
+
+### ✅ Resource Load Rule (Supaya Tidak Overwhelm)
+
+Per minggu hanya pakai:
+
+- 1 core resource
+- 1 documentation source
+- 1 project
+
+Contoh Week 36:
+
+- Core: Hugging Face Course
+- Docs: OpenAI API docs
+- Build: Study assistant feature
 
 ### 💡 AI-Proof Skills (Yang AI TIDAK BISA Replace):
 
@@ -541,10 +557,12 @@ DIHINDARI (waste of time):
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Fast.ai | fast.ai | Practical |
+| Google ML Crash Course | developers.google.com/machine-learning | Free fundamentals |
 | Hugging Face | huggingface.co | Models |
-| LangChain | langchain.com | LLM Apps |
-| Chip Huyen's Book | bit.ly/ml-systems-design | System design |
+| Kaggle Learn | kaggle.com/learn | Free practical exercises |
+| Made With ML | madewithml.com | MLOps + production mindset |
+| LangChain Academy | langchain.academy | Optional for LLM app engineering |
+| Fast.ai | fast.ai | Optional deep learning track |
 
 ## System Design
 
