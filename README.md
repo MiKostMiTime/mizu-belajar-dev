@@ -1,750 +1,1115 @@
-# 🚀 Mizu Belajar Dev — Software Engineering Roadmap
+# 🚀 Mizu Belajar Dev — Realistic Roadmap 2026
 
-> **Roadmap belajar software engineering yang project-driven, AI-proof, dan future-proof.**
-> Didesain untuk anak SMA yang sudah punya CS fundamentals (OSN) dan ingin membangun skill yang TIDAK BISA digantikan AI.
-
----
-
-## 🛡️ Filosofi: Menjadi AI-Proof Engineer
-
-```
-AI/Vibe-Coders bisa:              Kamu harus bisa (yang AI TIDAK bisa):
-├── Generate boilerplate code      ├── Arsitektur sistem yang kompleks
-├── Autocomplete syntax            ├── Memahami KENAPA, bukan hanya APA
-├── Translate requirements to code ├── Debug masalah yang belum pernah ada
-├── Write tests from specs         ├── Desain UX yang empatik & manusiawi
-└── Copy-paste patterns            ├── Komunikasi & kolaborasi tim
-                                   ├── Evaluate trade-offs (scalability vs speed vs cost)
-                                   ├── Kreativitas & product thinking
-                                   └── Belajar teknologi baru dengan cepat (meta-learning)
-```
-
-### 🔑 5 Prinsip Anti-Replacement:
-1. **Pahami "KENAPA" di balik setiap kode** — Jangan cuma copy-paste, pahami arsitektur & trade-offs
-2. **Build real things for real people** — Portfolio > Sertifikat. User feedback > Tutorial completion
-3. **Master the fundamentals, ride the tools** — Framework berubah setiap 2 tahun. CS fundamentals bertahan selamanya
-4. **Be a builder, not just a coder** — Product thinking + design + engineering = irreplaceable
-5. **Use AI as accelerator, not replacement** — Tulis dulu sendiri → pakai AI untuk review & optimize → pahami perbedaannya
+> **5-Year Roadmap to Become an Irreplaceable Engineer.**
+> Tailored for an OSN Informatika student entering Computer Science.
+> Full-stack web + mobile (iOS & Android) + AI integration.
+> Written with Indonesian market reality in mind.
 
 ---
 
-## 📌 Konteks Pribadi
+## 🎯 Executive Summary
 
-| Item | Detail |
-|------|--------|
-| **Hardware** | MacBook M4 Max 48GB RAM |
-| **Design Tool** | Figma |
-| **Code Editor (Web)** | PHPStorm (superset of WebStorm) |
-| **Code Editor (iOS)** | Xcode |
-| **Terminal** | iTerm2 |
-| **Browser** | Brave (Chromium — full DevTools) + Safari (cross-browser testing) |
-| **CS Fundamentals** | ✅ Sudah punya dari persiapan OSN (algoritma, data structures, problem solving) |
-| **Database GUI** | DataGrip (gratis via GitHub Student / JetBrains) |
-| **ML on device** | Create ML |
+| Timeline | Fokus Utama | Realistic Key Outcome |
+|----------|-------------|----------------------|
+| **Year 1** | Full-Stack Web + Mobile + AI Basics | 6-8 projects, 1 capstone, solid fundamentals |
+| **Year 2** | Survive CS Year 1 + First Income | 3.3-3.5+ GPA, 1-2 freelance projects, figure out priorities |
+| **Year 3** | Internship Hunt + System Design | First real internship (startup/local tech), 250-400 LeetCode |
+| **Year 4** | Depth + Leadership | Strong internship, open source, prep for full-time applications |
+| **Year 5** | Career Entry | FAANG/big tech OR solid startup OR grad school |
 
----
+### Why This Is Different
 
-## 🗂️ Tools Stack
-
-### Install Day One (di iTerm2):
-```bash
-# 1. Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# 2. Essentials
-brew install git node python
-
-# 3. Git config
-git config --global user.name "MiKostMiTime"
-git config --global user.email "YOUR_EMAIL@example.com"
-
-# 4. SSH key untuk GitHub
-ssh-keygen -t ed25519 -C "YOUR_EMAIL@example.com"
-
-# 5. Useful tools (install sesuai fase)
-brew install --cask docker        # Fase 4
-brew install --cask datagrip      # Fase 4 (gratis via GitHub Student / JetBrains)
-brew install --cask sf-symbols    # Fase 3
-brew install --cask bruno         # Fase 4
-
-# 6. Verify
-node --version && npm --version && git --version && python3 --version
 ```
+WHAT WAS WRONG BEFORE:
+├── 15+ projects in Year 1 — nobody builds that many quality projects
+├── "Publish to both app stores" — costs $124, requires Mac, unrealistic
+├── 3 capstones in 10 weeks — means 3 half-baked projects
+├── FAANG internship by Year 3 — most programs are US-only
+├── Rp 10-20 juta/month in Year 2 — Indonesian fresh grad salary is Rp 5-8 juta
+├── 10-15 hrs/week CP + full-stack + freelance + university — time math doesn't work
+├── 3.8+ GPA from semester 1 — first semester is hardest, survival is the goal
+├── ICPC medal — requires 3 equally skilled teammates, not under your control
+└── Mixed language fragments (Chinese, Portuguese) — unprofessional
 
-### 💡 Kenapa DataGrip, bukan TablePlus?
-
-| | TablePlus | DataGrip |
-|-|-----------|----------|
-| **Harga** | Berbayar (trial sangat terbatas — max 2 tab, tidak bisa filter, dll) | **Gratis** via [GitHub Student Developer Pack](https://education.github.com/pack) / JetBrains Education |
-| **Ekosistem** | Standalone, tidak terintegrasi dengan IDE | Satu ekosistem dengan PHPStorm — shortcut, tema, dan settings yang konsisten |
-| **Database support** | PostgreSQL, MySQL, SQLite, dll | PostgreSQL, MySQL, SQLite, MongoDB, Redis, dan banyak lagi |
-| **Query editor** | Basic | Full IDE — autocomplete, refactor, explain plan, version control |
-| **Data export/import** | Terbatas di trial | Penuh — CSV, JSON, SQL dump, dll |
-| **ER Diagram** | ❌ | ✅ Bisa generate diagram dari schema langsung |
-
-> **TL;DR:** DataGrip = database IDE yang sebenarnya. TablePlus bagus, tapi trial-nya terlalu terbatas untuk belajar. Karena kamu sudah punya akses JetBrains lewat GitHub Student, DataGrip adalah pilihan paling masuk akal di stack ini.
-
-### PHPStorm Plugins:
-- GitHub Copilot, Tailwind CSS, Prettier, ESLint, Prisma, .env files support, GitToolBox
-
-> ⚠️ **Catatan ESLint:** PHPStorm's ESLint plugin **membutuhkan ESLint npm package** yang di-install di dalam project. Tanpa package-nya, plugin tidak bisa berjalan. Install ESLint sebagai dev dependency di **setiap** JavaScript/TypeScript project.
-
-### ESLint Setup (wajib di setiap JS/TS project):
-```bash
-# Install ESLint sebagai dev dependency
-npm install --save-dev eslint
-
-# Inisialisasi konfigurasi ESLint
-npx eslint --init
-```
-
-Pilihan saat `eslint --init`:
-- ✅ **How would you like to use ESLint?** → `To check syntax, find problems, and enforce code style`
-- ✅ **What type of modules?** → `JavaScript modules (import/export)` untuk project modern / `CommonJS` untuk Node.js
-- ✅ **Which framework?** → sesuaikan (React / None)
-- ✅ **Does your project use TypeScript?** → Yes/No sesuai project
-- ✅ **Where does your code run?** → Browser / Node sesuai project
-
-Setelah setup, tambahkan script ke `package.json`:
-```json
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
-}
-```
-
-Kemudian di PHPStorm: **Settings → Languages & Frameworks → JavaScript → Code Quality Tools → ESLint** → pilih **Automatic ESLint configuration** agar PHPStorm otomatis deteksi dari `node_modules`.
-
-### Workspace Structure:
-```
-📁 ~/Developer/
-├── 📁 web-projects/
-├── 📁 ios-projects/
-├── 📁 backend-projects/
-└── 📁 learning/
+WHAT'S FIXED:
+├── 1 capstone done WELL > 3 capstones done poorly
+├── App store publishing = optional, demo video is fine
+├── Income targets based on Indonesian market reality
+├── FAANG timeline adjusted (possible but not by Year 3 for Indonesian students)
+├── CP maintenance = 4-6 hrs/week if you enjoy it, 0 if you don't
+├── GPA targets start realistic (3.3+) and grow over time
+├── Consistent language (Indonesian + English technical terms)
+└── Brutal honesty about what's hard and what's achievable
 ```
 
 ---
 
-# 📅 ROADMAP 52 MINGGU (Revisi Final)
-
-> **Karena kamu sudah punya CS fundamentals dari OSN**, Fase 4 sekarang berfokus pada backend engineering & system design, BUKAN belajar algoritma dari nol. Waktu yang dihemat dipakai untuk skill yang membuat kamu AI-proof: arsitektur, product thinking, dan building real products.
-
----
-
-## 🟢 FASE 1: FONDASI WEB + FIRST DEPLOY (Minggu 1–10)
-
-### 📖 Sumber Utama: [The Odin Project](https://theodinproject.com) | Referensi: [MDN Web Docs](https://developer.mozilla.org)
-
-### 🎯 Goal: Bisa bikin web app interaktif dan deploy ke internet
-
-| Minggu | Fokus | 🔨 Project | ✅ Deliverable |
-|--------|-------|------------|----------------|
-| **1** | HTML semantic + CSS basics + Box Model | **Personal Profile Page** — design di Figma → code | Halaman HTML/CSS live di GitHub Pages |
-| **2** | Flexbox + Grid + Responsive Design | **Landing Page responsive** — mobile-first approach | Landing page responsive di semua device |
-| **3** | JS Fundamentals — variables, types, conditionals, loops, functions | **Kalkulator** (console dulu → lalu dengan UI) | Kalkulator working di browser |
-| **4** | DOM Manipulation + Events | **Rock Paper Scissors** dengan UI + score tracking | Game interaktif |
-| **5** | Arrays, Objects, Higher-order functions | **To-Do List** — add, delete, filter, mark complete | CRUD app di browser |
-| **6** | ES6+ — arrow functions, destructuring, modules, async/await | **Quiz App** — fetch questions dari Open Trivia API | App yang consume external API |
-| **7** | Fetch API + JSON + Error Handling | **Weather App** — lokasi user → tampilkan cuaca + 5-day forecast | Weather app functional |
-| **8** | LocalStorage + State Management sederhana | **Bookmark Manager** — save, categorize, search bookmarks | App dengan persistent data |
-| **9** | Git mastery — branching, merging, rebasing, PR workflow | Rapikan SEMUA 6 project + proper README setiap repo | 6 repos clean di GitHub |
-| **10** | Deployment + Portfolio | **Portfolio Website v1** — showcase semua project + deploy | ✅ **MILESTONE: Portfolio LIVE + 7 projects** |
-
-### 🧠 AI-Proof Skill yang Dibangun di Fase 1:
-- Debugging tanpa AI (DevTools mastery)
-- Problem decomposition (pecah masalah besar jadi kecil)
-- Figma → Code workflow (design thinking)
-
----
-
-## 🔵 FASE 2: REACT + NEXT.JS FULL-STACK (Minggu 11–22)
-
-### 📖 Sumber: [react.dev/learn](https://react.dev/learn) | [Next.js Learn](https://nextjs.org/learn) | [The Odin Project React](https://theodinproject.com)
-
-### 🎯 Goal: Build & deploy full-stack web application
-
-| Minggu | Fokus | 🔨 Project | ✅ Deliverable |
-|--------|-------|------------|----------------|
-| **11** | React Basics — components, JSX, props | **UI Component Library** — 10 reusable components | Component set documented |
-| **12** | State + Events — useState, conditional rendering | **CV/Resume Builder** — input form → generate printable CV | Working app |
-| **13** | useEffect + API fetching in React | **GitHub Profile Viewer** — input username → show repos, stats | App that fetches real data |
-| **14** | React Router + Multi-page SPA | **Portfolio v2** — upgrade ke React SPA dengan routing | Portfolio upgraded |
-| **15** | Context API + Complex State | **Shopping Cart** — product list, add/remove, quantities, checkout | E-commerce cart working |
-| **16** | Custom Hooks + Performance | Refactor projects + buat 3 custom hooks (useFetch, useLocalStorage, useDebounce) | Cleaner codebase + reusable hooks |
-| **17** | Next.js — routing, SSR, SSG | **Migrate Portfolio ke Next.js** + add blog section | Portfolio with SSG blog |
-| **18** | API Routes + Server Actions | **URL Shortener** — shorten links, track clicks, dashboard | Full-stack CRUD app |
-| **19** | Database — Prisma + SQLite → PostgreSQL | **Personal Blog** — write, edit, delete articles + markdown support | Blog with real database |
-| **20** | Tailwind CSS + shadcn/ui | Redesign ALL projects dengan Tailwind + consistent design system | Modern, polished UI |
-| **21** | Figma Design System → Code | Build **mini design system** di Figma → implement sebagai component library | Design system documented & coded |
-| **22** | **🏆 CAPSTONE WEB** | **SaaS App** — Habit Tracker / Budget App / Note-taking app. Full: Figma → Next.js + Tailwind + Prisma + Auth + Deploy Vercel | ✅ **MILESTONE: Full-stack SaaS LIVE with real users** |
-
-### 🧠 AI-Proof Skills di Fase 2:
-- **Architecture decisions** — kapan pakai SSR vs SSG vs CSR? Kenapa?
-- **System design thinking** — database schema design, API design
-- **Product thinking** — build for real users, get feedback, iterate
-- **Design engineering** — Figma → Code pipeline yang smooth
-
----
-
-## 🟣 FASE 3: iOS NATIVE DEVELOPMENT (Minggu 23–34)
-
-### 📖 Sumber: [100 Days of SwiftUI](https://hackingwithswift.com/100/swiftui) | [Apple Dev Tutorials](https://developer.apple.com/tutorials/develop-in-swift)
-
-### 🎯 Goal: Ship iOS app yang berjalan di device sendiri
-
-| Minggu | Fokus | 🔨 Project | ✅ Deliverable |
-|--------|-------|------------|----------------|
-| **23** | Swift — types, control flow, functions, optionals | 20+ Swift Playground challenges | Swift basics solid |
-| **24** | Structs, Classes, Protocols, Enums | **Quiz Game** di Playground | OOP mastery |
-| **25** | SwiftUI — Views, Modifiers, Stacks, Layout | **Unit Converter** — weight, length, temperature | First app di simulator |
-| **26** | State, Binding, ObservableObject | **Guess the Flag** — quiz game + scoring + animations | Interactive game |
-| **27** | Lists, Navigation, Forms | **Expense Tracker** — input, categorize, list, total | Financial app working |
-| **28** | Networking — URLSession, JSON, Codable | **News Reader** — fetch real news API + pull to refresh | App with live data |
-| **29** | SwiftData (modern persistence) | **Bookworm** — add books, rate, review, persist locally | App with local database |
-| **30** | Animations + Gestures + Custom Views | **Polish ALL apps** — micro-interactions, transitions, haptics | Apps feel premium |
-| **31** | MapKit + CoreLocation | **Places App** — save favorite locations + show on map | Location-aware app |
-| **32** | MVVM Architecture + Clean Code | **Refactor ALL projects ke MVVM** | Clean architecture |
-| **33** | Create ML + CoreML integration | **Image Classifier** — train model di Create ML → integrate ke app | On-device ML app |
-| **34** | **🏆 CAPSTONE iOS** | **iOS App** — Finance Tracker / Discovery App / Wellness App. Full: Figma → SwiftUI + MVVM + SwiftData + MapKit + Deploy ke TestFlight | ✅ **MILESTONE: iOS app on real device** |
-
-### 🧠 AI-Proof Skills di Fase 3:
-- **Platform expertise** — deep understanding of Apple ecosystem (competitive advantage karena punya Mac)
-- **On-device ML** — Create ML + CoreML = AI yang berjalan offline, privacy-first
-- **UX empathy** — mobile UX itu beda dari web, butuh pemahaman human interaction
-
----
-
-## 🟠 FASE 4: BACKEND ENGINEERING + SYSTEM DESIGN (Minggu 35–46)
-
-### 📖 Sumber: [freeCodeCamp Backend](https://freecodecamp.org) | [The Odin Project NodeJS](https://theodinproject.com)
-
-### 🎯 Goal: Build production-grade backend + understand system design
-
-> ⚡ Karena OSN sudah cover DSA, fase ini fokus ke **engineering skills** yang bikin kamu irreplaceable
-
-| Minggu | Fokus | 🔨 Project / Aktivitas | ✅ Deliverable |
-|--------|-------|------------------------|----------------|
-| **35** | Node.js deep-dive — runtime, event loop, streams, modules | **CLI Tool** — file organizer / markdown converter / project scaffolder | CLI tool published di npm |
-| **36** | Express.js + REST API design + API documentation | **REST API** untuk web capstone + Swagger docs | Documented API |
-| **37** | PostgreSQL + Prisma ORM + Database design | **Database schema design** + migrations + seed data | Production-ready DB |
-| **38** | Authentication & Authorization — JWT, OAuth 2.0, sessions | **Auth system** — register, login, roles, protected routes, refresh tokens | Secure auth system |
-| **39** | Testing — unit tests, integration tests, E2E | **Test suite** untuk API — Jest + Supertest + coverage report | 80%+ test coverage |
-| **40** | Error handling, logging, monitoring | Add **structured logging + error handling** ke semua APIs | Production-grade error handling |
-| **41** | Docker + Docker Compose | **Containerize** full-stack app (frontend + backend + database) | docker-compose up → everything runs |
-| **42** | CI/CD — GitHub Actions | **Pipeline** — lint → test → build → deploy otomatis saat push | Automated deployment |
-| **43** | System Design Fundamentals — caching, load balancing, message queues, microservices | Study + **design doc** untuk grand capstone (architecture diagram, tech decisions, trade-offs) | Architecture document |
-| **44** | Security — OWASP Top 10, rate limiting, input validation, CORS | **Security audit** semua project + fix vulnerabilities | Hardened applications |
-| **45-46** | **🏆 GRAND CAPSTONE** | **Production-grade Full-Stack App** — Multi-user app with: Auth + Database + API + Tests + Docker + CI/CD + Monitoring. Bisa jadi: Project management tool / Marketplace / Social platform | ✅ **MILESTONE: Production-grade app with DevOps** |
-
-### 🧠 AI-Proof Skills di Fase 4:
-- **System design** — AI bisa generate code, tapi tidak bisa design arsitektur yang scalable
-- **Security mindset** — understanding attack vectors & defensive programming
-- **Testing culture** — AI generates code, humans verify correctness
-- **DevOps thinking** — infrastructure, deployment, monitoring = high-value skills
-- **Trade-off evaluation** — "should we use microservices or monolith?" requires human judgment
-
----
-
-## 🔴 FASE 5: AI INTEGRATION + SPECIALIZATION + LAUNCH (Minggu 47–52)
-
-### 📖 Sumber: [Kaggle Learn](https://kaggle.com/learn) | [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course) | [3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-
-### 🎯 Goal: Integrate AI into your apps + professional launch
-
-| Minggu | Fokus | 🔨 Project / Aktivitas | ✅ Deliverable |
-|--------|-------|------------------------|----------------|
-| **47** | AI/ML Foundations — 3Blue1Brown + Kaggle Learn (Intro to ML + Intermediate ML) | **Kaggle mini-project** — prediction model + submit to competition | ML model + Kaggle submission |
-| **48** | Practical AI Integration — LLM APIs (OpenAI/local models) + Create ML | **Add AI feature ke salah satu capstone** — smart search / content suggestion / image classification | AI-powered feature in production |
-| **49** | Open Source Contribution | Find 2-3 "good first issue" → submit PR → get merged | **Merged PR in open source project** |
-| **50** | Portfolio v3 Final — case studies, blog posts | **Portfolio production-ready** — setiap capstone punya case study (problem → solution → results) | Portfolio that tells stories |
-| **51** | Professional presence + content | GitHub Profile README + 2 technical blog posts + LinkedIn optimized | Professional online presence |
-| **52** | **RETROSPECTIVE + YEAR 2 PLANNING** | Review semua yang dipelajari + plan specialization untuk tahun depan | ✅ **MILESTONE AKHIR: 17+ projects, 4 capstones, portfolio live, open source contributor** |
-
-### 🧠 AI-Proof Skills di Fase 5:
-- **AI as a tool, not a crutch** — you decide WHEN and HOW to use AI
-- **Communication** — writing case studies, blog posts, explaining decisions
-- **Open source collaboration** — working with real teams, real codebases
-- **Product storytelling** — not just "I built this" but "here's the problem I solved and why it matters"
-
----
-
-# 🔭 ROADMAP 5 TAHUN (Long-Term Anti-Replacement Strategy)
+# ⚠️ READ THIS FIRST: The Honest Truth
 
 ```
-TAHUN 1 (Roadmap di atas)
-├── Web Full-Stack (React/Next.js)
-├── iOS Native (Swift/SwiftUI)
-├── Backend Engineering + DevOps
-├── AI/ML Integration
-└── Output: 17+ projects, 4 capstones, portfolio, open source
+BEFORE YOU START ANY ROADMAP, UNDERSTAND:
 
-TAHUN 2: DEPTH + FIRST INCOME
-├── TypeScript mastery (wajib)
-├── Pilih 1 spesialisasi utama:
-│   ├── 🅰️ Full-Stack Product Engineer → Advanced React, System Design, SaaS
-│   ├── 🅱️ Apple Platform Engineer → visionOS, watchOS, advanced Swift
-│   └── 🅾️ AI Engineer → Python deep-dive, LLM apps, RAG, fine-tuning
-├── Freelance project pertama / magang
-├── Build 1 product with paying users
-└── Output: Specialization + first income from coding
+1. YOU WILL NOT FOLLOW THIS PERFECTLY.
+   You might need 18 months for Year 1 content. That's NORMAL.
+   Most self-taught developers take 2 years to become employable.
 
-TAHUN 3: PROFESSIONAL ENGINEER
-├── Masuk kuliah (CS/SE) atau intensive self-study
-├── Advanced System Design (distributed systems, databases at scale)
-├── Cloud platform (AWS/GCP — pick one, go deep)
-├── Team collaboration (code review, agile, mentoring)
-├── Build product that scales to 1000+ users
-└── Output: Professional experience + product with real traction
+2. UNIVERSITY WILL TAKE MORE TIME THAN YOU EXPECT.
+   Indonesian CS programs have attendance requirements.
+   You'll have classes unrelated to coding that you MUST attend.
+   First semester GPA will likely disappoint you. This is normal.
 
-TAHUN 4: T-SHAPED EXPERTISE
-├── Deep in 1 domain + broad across many
-├── Emerging tech that humans will lead:
-│   ├── AI/Human collaboration patterns
-│   ├── AR/VR (Apple Vision Pro / spatial computing)
-│   ├── Edge computing + privacy-first architecture
-│   └── Developer tooling & infrastructure
-├── Tech leadership: mentoring juniors, tech talks, writing
-└── Output: Known expert in 1-2 domains + leadership skills
+3. YOU CANNOT DO EVERYTHING AT ONCE.
+   CP + full-stack + AI + freelance + university = burnout recipe.
+   Each year, pick 2-3 priorities. Not 5.
 
-TAHUN 5: UNREPLACEABLE
-├── You can now:
-│   ├── Architect complex systems end-to-end
-│   ├── Lead teams and make technical decisions
-│   ├── Evaluate and adopt ANY new technology rapidly
-│   ├── Build products from 0 → users → revenue
-│   └── Teach and mentor others
-├── Career paths:
-│   ├── 🏢 Senior Engineer at top company
-│   ├── 🚀 Co-founder / CTO of startup
-│   ├── 💼 Premium freelance / consulting
-│   └── 🎓 Research / advanced studies
-└── Output: Engineer who shapes technology, not just uses it
+4. FAANG IS POSSIBLE BUT NOT GUARANTEED.
+   The path from Indonesian university to FAANG is LONG.
+   Most who make it: Indonesian university → local tech (2-3 years) → FAANG Singapore.
+   Direct from Indonesian university to FAANG is rare but not impossible.
+   Google Indonesia DOES hire. TikTok Indonesia DOES hire.
+   Meta/Apple/Netflix don't have Indonesia offices.
+
+5. INCOME WILL BE SLOW AT FIRST.
+   Year 2: Probably Rp 0-5 juta/month average.
+   Year 3: Rp 2-8 juta/month (with internship).
+   Year 4: Rp 5-15 juta/month (better internship).
+   Year 5: Rp 15-50 juta/month (full-time, varies wildly by company/location).
+   These are INDONESIAN rates. US/Singapore rates are 5-10x higher.
+
+6. THIS ROADMAP IS A COMPASS, NOT A GPS.
+   Skip sections that don't apply.
+   Take longer on things that are hard.
+   Discover new interests and pivot.
+   The direction matters more than the speed.
 ```
 
 ---
 
-# 📊 Final Project Output Summary
+# 🎓 YEAR 1: FOUNDATION → PRODUCTION (Weeks 1-52)
 
-| # | Project | Tech Stack | Fase |
-|---|---------|------------|------|
-| 1 | Personal Profile Page | HTML/CSS | 1 |
-| 2 | Landing Page | CSS Flexbox/Grid | 1 |
-| 3 | Rock Paper Scissors | JavaScript + DOM | 1 |
-| 4 | To-Do List | JavaScript | 1 |
-| 5 | Quiz App | JS + API | 1 |
-| 6 | Weather App | JS + API + LocalStorage | 1 |
-| 7 | Bookmark Manager | JS + LocalStorage | 1 |
-| 8 | Portfolio v1 | HTML/CSS/JS | 1 |
-| 9 | CV/Resume Builder | React | 2 |
-| 10 | Shopping Cart | React + Context | 2 |
-| 11 | URL Shortener | Next.js + API Routes | 2 |
-| 12 | Personal Blog | Next.js + Prisma + DB | 2 |
-| 13 | **🏆 Capstone: SaaS Web App** | Next.js + Tailwind + Prisma + Auth + Vercel | 2 |
-| 14 | Expense Tracker iOS | SwiftUI + SwiftData | 3 |
-| 15 | News Reader iOS | SwiftUI + URLSession | 3 |
-| 16 | Image Classifier | SwiftUI + Create ML + CoreML | 3 |
-| 17 | **🏆 Capstone: iOS App** | Swift + MVVM + SwiftData + MapKit | 3 |
-| 18 | CLI Tool | Node.js (published to npm) | 4 |
-| 19 | REST API + Auth + Tests | Express + PostgreSQL + Jest | 4 |
-| 20 | **🏆 Grand Capstone: Full-Stack** | Next.js + Express + PostgreSQL + Docker + CI/CD | 4 |
-| 21 | AI/ML Mini Project | Python + Kaggle | 5 |
-| 22 | **Portfolio Final** | Next.js + case studies | 5 |
+> **Pre-university phase. Focus: Learn fundamentals, build things, ship something.**
 
----
-
-# 📋 Resource yang Dipakai (Gratis & Terkurasi)
-
-| Kategori | Sumber | Link |
-|----------|--------|------|
-| **Web Full-Stack** | The Odin Project | [theodinproject.com](https://theodinproject.com) |
-| **React** | React Official Tutorial | [react.dev/learn](https://react.dev/learn) |
-| **Next.js** | Next.js Learn | [nextjs.org/learn](https://nextjs.org/learn) |
-| **iOS/Swift** | 100 Days of SwiftUI | [hackingwithswift.com](https://hackingwithswift.com/100/swiftui) |
-| **iOS/Swift** | Apple Developer Tutorials | [developer.apple.com](https://developer.apple.com/tutorials/develop-in-swift) |
-| **Backend** | freeCodeCamp Backend | [freecodecamp.org](https://freecodecamp.org) |
-| **AI/ML** | Kaggle Learn | [kaggle.com/learn](https://kaggle.com/learn) |
-| **AI/ML** | Google ML Crash Course | [developers.google.com](https://developers.google.com/machine-learning/crash-course) |
-| **AI/ML Visual** | 3Blue1Brown Neural Networks | [YouTube Playlist](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
-| **Git/GitHub** | GitHub Skills | [skills.github.com](https://skills.github.com) |
-| **Referensi** | MDN Web Docs | [developer.mozilla.org](https://developer.mozilla.org) |
-| **Algorithm Visual** | VisuAlgo | [visualgo.net](https://visualgo.net) |
-
----
-
-# ⚡ Rules for Myself
-
-1. **80% Build, 20% Learn** — Jangan jatuh ke tutorial hell
-2. **1-2 jam/hari konsisten** — Lebih baik dari 10 jam sekali seminggu
-3. **AI Rule: Code first 15 min → AI assist → Understand the diff** — Jangan langsung minta AI
-4. **Every project gets a README** — Document what you built and why
-5. **Push to GitHub EVERY DAY** — Green squares = proof of consistency
-6. **Design in Figma BEFORE coding** — Think before you type
-7. **Get feedback from real people** — Show your projects, ask for criticism
-8. **When stuck > 30 min: take a break, then ask** — Don't burn out
-
----
-
-# 🔄 Strategi Adaptasi di Tengah Perkembangan Teknologi yang Pesat
-
-> *Teknologi berubah setiap 2–3 tahun. Engineer yang survive bukan yang tahu semua tool, tapi yang tahu cara belajar tool baru dengan cepat.*
-
-## 🧠 Pola Pikir (Mindset) yang Harus Dibangun
+### What Actually Matters
 
 ```
-Cara SALAH:                          Cara BENAR:
-├── Hafal setiap framework           ├── Pahami KONSEP di balik framework
-├── Ikut setiap hype teknologi       ├── Evaluasi teknologi secara kritis
-├── Tutorial satu per satu          ├── Build project nyata → pelajari sesuai kebutuhan
-├── Belajar saat ada waktu           ├── Jadwalkan 1–2 jam/hari, konsisten
-└── Tunggu "siap" sebelum mulai      └── Ship fast, iterate, improve
+AT THE END OF YEAR 1, CAN YOU:
+├── Build a full-stack app from scratch WITHOUT a tutorial?
+├── Deploy something to the internet that real people can use?
+├── Debug when things break (without immediately asking AI)?
+└── Explain WHY you made each technical decision?
+
+If yes to all four → you're ahead of 80% of CS graduates.
 ```
 
-## 🗺️ Framework Evaluasi Teknologi Baru
+### Year 1 Overview (Flexible Timelines)
 
-Sebelum invest waktu belajar teknologi baru, tanyakan ini:
+```
+Phase 1  (Weeks 1-13):   Web Full-Stack (React/Next.js/TypeScript)
+Phase 2  (Weeks 14-26):  Mobile (React Native + optional native touch)
+Phase 3  (Weeks 27-35):  Backend Engineering + AI Basics
+Phase 4  (Weeks 36-46):  ONE Capstone Project
+Buffer (Weeks 47-52):    Polish, Rest, Prepare for University
 
-| Pertanyaan | Indikator Layak Dipelajari |
-|------------|---------------------------|
-| **Masalah apa yang dipecahkan?** | Ada pain point nyata yang kamu rasakan |
-| **Siapa yang pakai di production?** | Big companies atau banyak open source project |
-| **Komunitas seberapa aktif?** | GitHub stars tren naik, forum aktif, update rutin |
-| **Apakah fundamentals yang sudah ku punya berlaku di sini?** | Jika ya → learning curve lebih pendek |
-| **Apakah ada job market-nya?** | Cek LinkedIn/job board untuk 2–3 tahun ke depan |
-
-## ⚡ Framework Belajar Cepat (Meta-Learning)
-
-### 1. The 20% Rule — Cukup 20% untuk Produktif
-Dalam teknologi baru, **20% konsep sering cover 80% use cases**. Mulai dari:
-- Official "Getting Started" / "Tutorial" resmi
-- Build 1 project kecil yang mencerminkan real-world use case
-- Expand pengetahuan sesuai kebutuhan project
-
-### 2. Feynman Technique — Uji Pemahaman
-1. Pelajari konsep
-2. Jelaskan dengan bahasa sendiri seolah mengajar orang lain
-3. Identifikasi bagian yang tidak bisa dijelaskan → itu gap yang harus diisi
-4. Sederhanakan penjelasan sampai bisa dipahami anak SMA
-
-### 3. Spaced Repetition — Lawan Lupa
-- Ulangi materi di interval yang makin panjang: 1 hari → 3 hari → 1 minggu → 1 bulan
-- Gunakan Anki (offline) untuk flashcard teknis
-
-### 4. Deliberate Practice — Latihan Terarah
-- Jangan hanya re-read / re-watch → praktek langsung
-- Identifikasi weakness → fokus latihan di situ
-- Cari feedback dari code review, mentor, atau komunitas
-
-## 📡 Cara Tetap Update Tanpa Tenggelam dalam Informasi
-
-```bash
-# Weekly routine (max 30 menit/minggu):
-1. Cek GitHub Trending (github.com/trending) → lihat apa yang naik
-2. Baca 1 newsletter teknis: bytes.dev / tldr.tech / javascriptweekly.com
-3. Scan changelog/release notes tool yang sedang kamu pakai
-4. Follow 3–5 engineer senior di X/Twitter atau blog pribadi mereka
-
-# Monthly routine (max 2 jam/bulan):
-1. Baca 1 engineering blog post dari: engineering.spotify.com, netflixtechblog.com, atau martinfowler.com
-2. Review: apakah skill yang sedang kupelajari masih relevan?
-3. Update roadmap jika ada teknologi yang worth diprioritaskan
+IF PHASES TAKE 2-3 WEEKS LONGER → you're on track.
+IF PHASES TAKE 2-3 MONTHS LONGER → you're ALSO on track. Just slower.
 ```
 
 ---
 
-# 🔌 Belajar Tanpa Akses Internet
+## 🔧 PRE-PHASE: GIT & GITHUB ESSENTIALS (Week 0 — 2-3 Days)
 
-> *Koneksi internet bisa hilang. Tapi kalau kamu sudah siapkan environment belajar offline, progress tidak pernah berhenti.*
+> **Learn this BEFORE you start coding seriously.**
+> Git is not optional. It is the foundation of all professional software development.
 
-## 📥 Persiapan Offline — Download Sebelum Tidak Ada Internet
-
-### Dokumentasi Offline (Wajib Download)
-
-| Tool | Cara Download Offline | Ukuran Perkiraan |
-|------|----------------------|-----------------|
-| **Dash** (macOS) | [kapeli.com/dash](https://kapeli.com/dash) — download docsets pilihan | 50 MB – 2 GB |
-| **MDN Web Docs** | Di Dash: tambahkan docset "MDN" | ~200 MB |
-| **DevDocs** | [devdocs.io](https://devdocs.io) → Settings → pilih docs → enable offline | ~100–500 MB |
-| **Node.js docs** | Di Dash atau `npm install -g node-man` | ~10 MB |
-| **Swift docs** | Otomatis tersedia di Xcode offline | Included |
-| **React docs** | Di Dash: tambahkan docset "React" | ~5 MB |
-
-> 💡 **Dash** adalah investasi terbaik untuk developer macOS — download sekali, semua docs tersedia offline, terintegrasi dengan PHPStorm dan Xcode.
-
-### Kursus & Video Offline
-
-```bash
-# YouTube downloader (legal untuk personal use):
-brew install yt-dlp
-
-# Download seluruh playlist:
-yt-dlp -f "bestvideo[height<=1080]+bestaudio" \
-  --write-sub --sub-lang id,en \
-  "https://www.youtube.com/playlist?list=PLAYLIST_ID"
-
-# Download channel/playlist favorit sebelum tidak ada internet:
-# - 3Blue1Brown (matematika & neural networks)
-# - Fireship (quick tech overviews)
-# - Theo (t3.gg) — web dev modern
-# - The Primeagen — engineering mindset
-# - Hacking with Swift (tutorial iOS)
-```
-
-### Books & Reading Material Offline
-
-```bash
-# Download e-book gratis yang legal:
-# - "You Don't Know JS" series: github.com/getify/You-Dont-Know-JS
-# - "Eloquent JavaScript": eloquentjavascript.net (ada versi PDF)
-# - "The Pragmatic Programmer" — beli fisik/digital
-# - "Clean Code" — beli fisik/digital
-# - "Designing Data-Intensive Applications" — beli fisik/digital
-
-# Clone dokumentasi/buku open source ke lokal:
-git clone https://github.com/getify/You-Dont-Know-JS
-git clone https://github.com/ryanmcdermott/clean-code-javascript
-```
-
-### Repository & Source Code Offline
-
-```bash
-# Clone semua repo yang mungkin dibutuhkan:
-mkdir ~/Developer/offline-refs && cd ~/Developer/offline-refs
-
-# Framework source code (untuk baca ketika stuck):
-git clone --depth=1 https://github.com/facebook/react
-git clone --depth=1 https://github.com/vercel/next.js
-git clone --depth=1 https://github.com/tailwindlabs/tailwindcss
-
-# Best practices & patterns:
-git clone https://github.com/goldbergyoni/nodebestpractices
-git clone https://github.com/airbnb/javascript
-git clone https://github.com/kamranahmedse/developer-roadmap
-
-# Algoritma & data structures reference:
-git clone https://github.com/trekhleb/javascript-algorithms
-```
-
-## 🛠️ Setup Development Environment Offline Penuh
-
-```bash
-# Pastikan semua sudah diinstall dan bisa run TANPA internet:
-
-# 1. Node.js + npm (sudah offline setelah install)
-node --version && npm --version
-
-# 2. npm offline cache — install package dulu saat ada internet
-npm install <package>  # otomatis di-cache di ~/.npm
-
-# Install ulang dari cache tanpa internet:
-npm install --prefer-offline
-
-# 3. Homebrew offline (untuk tools yang sudah pernah di-download)
-brew install --formula git  # gunakan cache jika ada
-
-# 4. Docker images — pull dulu saat ada internet
-docker pull node:20-alpine
-docker pull postgres:16
-docker pull redis:alpine
-
-# 5. Xcode — download simulator & additional components saat online
-# Xcode → Settings → Platforms → download semua yang dibutuhkan
-
-# 6. CocoaPods / Swift Package Manager
-# Resolve dependencies saat online → commit Package.resolved
-# Offline install: swift package resolve --only-use-versions-from-resolved-file
-```
-
-## 📚 Bahan Belajar Offline yang Bisa Didownload
-
-### Cheat Sheets (Print atau Simpan Lokal)
+### Why This Matters
 
 ```
-~/Developer/learning/cheatsheets/
-├── git-cheatsheet.pdf          # github.com/github/training-kit
-├── html5-cheatsheet.pdf        # htmlcheatsheet.com
-├── css-tricks-almanac.pdf      # css-tricks.com/almanac
-├── javascript-cheatsheet.pdf   # javascript.info (ada PDF)
-├── regex-cheatsheet.pdf        # quickref.me/regex
-├── vim-cheatsheet.pdf          # jika pakai vim
-├── sql-cheatsheet.pdf          # sqltutorial.org/sql-cheat-sheet
-└── docker-cheatsheet.pdf       # dockerlabs.collabnix.com
+WITHOUT GIT:
+├── You lose code when things break
+├── "final_v2_REAL_FINAL.js" — we've all been there
+├── Cannot collaborate with anyone
+├── Cannot contribute to open source
+└── Cannot show your work to employers
+
+WITH GIT:
+├── Every change is tracked and reversible
+├── You can experiment safely (branches)
+├── GitHub = your public portfolio
+├── Every company uses it. Every developer needs it.
+└── It's FREE forever
 ```
 
-### Interactive Learning Offline
+### What You'll Learn
 
-| Tool | Kegunaan | Install |
-|------|---------|---------|
-| **Anki** | Flashcard spaced repetition | [apps.ankiweb.net](https://apps.ankiweb.net) |
-| **Obsidian** | Personal knowledge base | [obsidian.md](https://obsidian.md) |
-| **Excalidraw** (desktop) | System design diagram offline | `brew install --cask excalidraw` |
-| **Zeal** (alternatif Dash, gratis) | Offline docs viewer | [zealdocs.org](https://zealdocs.org) |
+| Topic | Time | Deliverable |
+|-------|------|-------------|
+| **Git Basics** | 2-3 hours | First repo with commits |
+| **Branching** | 1-2 hours | Feature branch workflow |
+| **GitHub** | 1-2 hours | Profile with 1+ repositories |
+| **Collaboration** | 1-2 hours | First PR (even to your own repo) |
 
----
+### Week-by-Week
 
-# 📚 Sumber Belajar Berkualitas & Efektif
+| Step | Topic | Resource | Deliverable |
+|------|-------|----------|-------------|
+| **1** | What is Git? Why version control? | "Git Explained" video | Understand the concept |
+| **2** | Install Git + First `git init` | git-scm.com/book/en/v2/Getting-Started | Git installed, first repo locally |
+| **3** | Core Commands: `add`, `commit`, `status`, `log`, `diff` | Pro Git Book (free) | 5+ meaningful commits |
+| **4** | Undo Things: `revert`, `reset` (safe ones first) | "Git Undo Mistakes" tutorial | Can recover from mistakes |
+| **5** | Create GitHub Account | github.com | Professional username |
+| **6** | Push to GitHub: `remote`, `push`, `pull` | GitHub's official docs | First repo on GitHub |
+| **7** | Branching: `branch`, `checkout`, `merge` | "Git Branching" tutorial | Create + merge a branch |
+| **8** | Pull Requests + Code Review | GitHub PR tutorial | Open + merge your first PR |
+| **9** | `.gitignore` | toptal.com/developers/gitignore | Proper .gitignore on all repos |
+| **10** | README + GitHub Profile | "Make a README" guide | Professional GitHub profile |
 
-> *Bukan yang paling banyak resources yang menang, tapi yang paling fokus dan konsisten menggunakannya.*
-
-## 🥇 Tier 1: Resources Terbaik Per Kategori
-
-### Web Development
-
-| Resource | Tipe | Offline? | Kenapa Bagus |
-|----------|------|---------|-------------|
-| **The Odin Project** | Kurikulum gratis | ❌ (tapi bisa clone) | Project-driven, community strong, kurikulum terarah |
-| **javascript.info** | Book/web | ✅ PDF tersedia | Paling lengkap dan mendalam untuk JavaScript modern |
-| **MDN Web Docs** | Referensi | ✅ via Dash | Official, akurat, selalu up-to-date |
-| **CSS-Tricks** | Blog/guide | ❌ | Practical CSS dari practitioner |
-| **web.dev** (Google) | Guides | Sebagian | Best practices dari Google engineers |
-
-### React & Next.js
-
-| Resource | Tipe | Offline? | Kenapa Bagus |
-|----------|------|---------|-------------|
-| **react.dev** | Docs resmi | ✅ via Dash | Docs terbaik, ada interactive examples |
-| **Next.js Docs** | Docs resmi | ✅ via Dash | Official, lengkap dengan examples |
-| **Josh W Comeau** (blog) | Blog | Sebagian cache | Penjelasan visual, mendalam, praktis |
-| **ByteGrad YouTube** | Video | ✅ yt-dlp | Real-world Next.js patterns |
-
-### iOS / Swift
-
-| Resource | Tipe | Offline? | Kenapa Bagus |
-|----------|------|---------|-------------|
-| **100 Days of SwiftUI** | Kurikulum | Sebagian | Project-driven, Paul Hudson sangat jelas menjelaskan |
-| **Swift.org** | Docs resmi | ✅ via Dash | Official Swift language reference |
-| **Apple Developer Docs** | Docs resmi | ✅ via Xcode | Framework reference lengkap, built-in di Xcode |
-| **Hacking with Swift** | Blog/buku | Sebagian | Real-world patterns, tips yang tidak ada di docs resmi |
-
-### Backend & System Design
-
-| Resource | Tipe | Offline? | Kenapa Bagus |
-|----------|------|---------|-------------|
-| **Node.js Docs** | Docs resmi | ✅ via Dash | Official, precise |
-| **PostgreSQL Docs** | Docs resmi | ✅ via Dash | Paling komprehensif untuk SQL |
-| **Designing Data-Intensive Applications** | Buku | ✅ (beli) | Bible-nya system design, wajib baca |
-| **System Design Primer** | GitHub repo | ✅ clone | [github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer) |
-| **High Scalability** (blog) | Blog | ❌ | Real case studies dari production systems |
-
-### Computer Science Fundamentals
-
-| Resource | Tipe | Offline? | Kenapa Bagus |
-|----------|------|---------|-------------|
-| **CS50 (Harvard)** | Video course | ✅ download | Fundamentals terbaik, gratis, berkualitas tinggi |
-| **CLRS** (Introduction to Algorithms) | Buku | ✅ (beli) | Reference DSA paling authoritative |
-| **Neetcode.io** | Video + problems | Sebagian | Paling efektif untuk DSA interview prep |
-| **VisuAlgo** | Visualisasi | ❌ | Visual banget untuk algoritma & data structures |
-
-## 🧰 Stack Belajar Efektif (Bukan Banyak, tapi Tepat)
+### Minimal Commands You MUST Know
 
 ```
-PRINSIP: 1 sumber utama per topik + 1 referensi per topik
-         Jangan buka 10 tutorial sekaligus → selesaikan 1 dulu
+ESSENTIAL (use these daily):
+├── git init              → Start tracking a project
+├── git status            → What's changed?
+├── git add <file>        → Stage changes
+├── git commit -m "msg"   → Save a version
+├── git push              → Upload to GitHub
+├── git pull              → Download latest from GitHub
+└── git log --oneline     → See history
 
-Per Fase, gunakan:
-┌─────────────────────────────────────────────────────────┐
-│  SUMBER UTAMA           REFERENSI           PRAKTEK     │
-│  (ikuti kurikulum)      (ketika stuck)      (wajib)     │
-│                                                         │
-│  The Odin Project    →  MDN / javascript.info →  BUILD  │
-│  react.dev           →  Josh W Comeau blog    →  BUILD  │
-│  100 Days SwiftUI    →  Apple Docs / Xcode    →  BUILD  │
-│  Buku DDIA           →  System Design Primer  →  DESIGN │
-└─────────────────────────────────────────────────────────┘
+IMPORTANT (use when needed):
+├── git branch <name>     → Create a branch
+├── git checkout <name>   → Switch to a branch
+├── git merge <branch>    → Merge a branch
+├── git diff              → See what changed
+├── git revert <commit>   → Undo a commit safely
+└── git stash             → Temporarily save changes
+
+YOU WILL LEARN LATER:
+├── git rebase (powerful but dangerous for beginners)
+├── git cherry-pick
+├── git bisect
+└── Advanced merge conflict resolution
 ```
 
-## 📖 Daftar Buku Wajib Baca (Prioritas Berdasarkan Fase)
-
-### Fase 1–2 (Baca sambil belajar):
-- **"Eloquent JavaScript"** — Marijn Haverbeke (gratis online, PDF tersedia)
-- **"You Don't Know JS"** series — Kyle Simpson (gratis di GitHub)
-- **"The Pragmatic Programmer"** — Andrew Hunt & David Thomas ⭐ prioritas tinggi
-
-### Fase 3–4 (Baca sambil belajar):
-- **"Clean Code"** — Robert C. Martin (wajib)
-- **"Designing Data-Intensive Applications"** — Martin Kleppmann ⭐ prioritas tinggi
-- **"The Phoenix Project"** — Gene Kim (DevOps & engineering culture)
-
-### Fase 5 & seterusnya:
-- **"A Philosophy of Software Design"** — John Ousterhout
-- **"Staff Engineer"** — Will Larson
-- **"The Manager's Path"** — Camille Fournier (untuk yang mau ke leadership)
-
-## 🎯 Teknik Belajar yang Terbukti Efektif
-
-### Build-Measure-Learn Loop
+### GitHub Best Practices
 
 ```
-1. BUILD kecil dulu → jangan tunggu paham semua
-2. STUCK → cari di docs resmi DULU (bukan langsung Google/AI)
-3. Masih stuck 30 menit → cari di StackOverflow / GitHub Issues
-4. Masih stuck → tanya di komunitas / pakai AI
-5. SETELAH solved: tulis di Obsidian / catatan pribadi → kamu sudah belajar itu
+DO:
+├── Commit often with clear messages
+│   └── "fix: resolve login timeout error" ✓
+│   └── "fixed stuff" ✗
+├── Push at the end of each working session
+├── Use branches for new features
+├── Write README for every project
+│   └── What it does, how to run it, tech stack
+├── Pin 3-6 best projects to your profile
+└── Keep GitHub profile professional (real name or consistent handle)
+
+DON'T:
+├── Commit secrets (API keys, passwords, .env files)
+├── Commit node_modules, .venv, build artifacts
+├── Push code that doesn't work without explaining it's WIP
+├── Use "final", "final2", "FINAL_REAL" in filenames
+├── Delete main/master branch
+└── Force push unless you know what you're doing
 ```
 
-### Active Recall vs Passive Consumption
+### Resources
+
+| Topic | Resource | Link | Time |
+|-------|----------|------|------|
+| **Git Basics** | Pro Git Book (free) | git-scm.com/book/en/v2 | 2-3 hours (Ch 1-3) |
+| **Interactive Tutorial** | Learn Git Branching | learingitbranching.js.org | 1-2 hours |
+| **Video Course** | Git & GitHub for Beginners (freeCodeCamp) | youtube.com → search "git tutorial freecodecamp" | 1-2 hours |
+| **GitHub Docs** | GitHub Skills | skills.github.com | 1-2 hours |
+| **Quick Reference** | Git Cheat Sheet | education.github.com/git-cheat-sheet | Bookmark |
+
+### How Git Fits Into Your Roadmap
 
 ```
-❌ Passive (tidak efektif):
-- Re-read tutorial berkali-kali
-- Menonton video tanpa praktek
-- Copy-paste code tanpa mengerti
+WEEK 0 (2-3 days):     Learn Git basics → Apply to ALL future projects
+WEEK 1+:               Every project goes to GitHub
+PHASE 1 (Web Dev):     Each project = separate repo with good commits
+PHASE 2 (Mobile):      Same workflow, GitHub as portfolio
+PHASE 3 (Backend):     Learn CI/CD basics with GitHub Actions (later)
+PHASE 4 (Capstone):    Professional repo with:
+                        ├── README with setup instructions
+                        ├── Clean commit history
+                        ├── Branches for features
+                        └── Deployed link in description
 
-✅ Active (efektif):
-- Tutup tutorial → coba implement dari memori
-- Jelaskan konsep ke diri sendiri (Feynman)
-- Build variasi dari contoh yang sudah ada
-- Buat test untuk kode yang kamu tulis
+YEAR 2+:               GitHub = your resume
+                        ├── Recruiters WILL look at your GitHub
+                        ├── Open source contributions count
+                        └── Green squares show consistent activity
 ```
 
-### Interleaving — Campur Topik
+### Common Beginner Mistakes
 
 ```
-Daripada belajar 1 topik 8 jam berturut-turut:
-→ Belajar topik A 1 jam → topik B 1 jam → kembali A → kembali B
+1. "I'll learn Git later, I just want to code now"
+   → Later = bad habits, lost code, regret
 
-Ini counter-intuitive tapi terbukti meningkatkan retensi jangka panjang.
-Dalam roadmap ini, setiap minggu sudah dirancang dengan variation supaya otak tetap aktif.
+2. Committing everything at once: "initial commit" with 500 files
+   → Commit in logical chunks with descriptive messages
+
+3. Not using branches
+   → Branches are FREE safety nets. Use them.
+
+4. Ignoring .gitignore
+   → Don't commit 500MB of node_modules or build files
+
+5. Being afraid to break things
+   → You CANNOT break Git permanently. Worst case: delete and start over
+
+6. Not backing up to GitHub
+   → Local-only repos die with your hard drive. Push everything.
 ```
 
-## 🗃️ Sistem Manajemen Pengetahuan Pribadi (PKM)
-
-Buat "Second Brain" di Obsidian (offline-first):
+### When to Start Using Git
 
 ```
-📁 ~/Developer/learning/obsidian-vault/
-├── 📁 concepts/            # Penjelasan konsep teknis dengan kata-kata sendiri
-│   ├── javascript-closures.md
-│   ├── react-reconciliation.md
-│   └── database-indexing.md
-├── 📁 snippets/            # Code snippets yang sering dipakai
-├── 📁 til/                 # "Today I Learned" — satu entry per hari
-├── 📁 resources/           # Link & catatan resource yang sudah dikonsumsi
-└── 📁 projects/            # Catatan teknis per project
-```
+START USING GIT:
+├── TODAY. Not tomorrow. Not "when you're ready."
+├── Your very next project, even if it's just HTML
+├── Every project from Week 1 onwards
+└── Before you touch any code in this roadmap
 
-> 💡 Setiap kali belajar sesuatu yang baru, **tulis dengan kata-kata sendiri** di vault ini. Satu paragraph saja cukup. Dalam 1 tahun, kamu punya knowledge base pribadi yang jauh lebih berguna dari ratusan bookmark yang tidak pernah dibuka lagi.
-
----
-
-# 📈 Weekly Progress Tracking
-
-Track progress di [Issues](https://github.com/MiKostMiTime/mizu-belajar-dev/issues) — buat comment setiap minggu:
-
-```markdown
-## Week X — [Fase Y]
-**Fokus:** [Topik minggu ini]
-**Project:** [Nama project]
-**Link:** [GitHub repo link]
-**What I learned:** [3 bullet points]
-**Blockers:** [Apa yang sulit]
-**Next week:** [Rencana]
+TOO LATE TO START:
+├── After you've lost 3 hours of work
+├── After you can't remember what you changed
+├── After you need to show work to employer/recruiter
+└── After you need to collaborate and can't
 ```
 
 ---
 
-> *"The best way to predict the future is to build it."* — Alan Kay
+## 🟢 PHASE 1: WEB DEVELOPMENT (Weeks 1-13)
 
-> *"AI will replace coders who can't think. It will amplify engineers who can."*
+### Goal: Build 3-4 working web apps, understand React + TypeScript
 
-**Mulai dari Minggu 1. Jangan tunggu sempurna. Mulai sekarang. 🔥**
+### Week-by-Week
+
+| Week | Topic | Project | Deliverable |
+|------|-------|---------|-------------|
+| **1** | HTML5 + CSS3 Basics | Personal landing page | Live on GitHub Pages |
+| **2** | Flexbox, Grid, Responsive | Dashboard layout (static) | Works on phone + desktop |
+| **3** | TypeScript Basics | Grade calculator | Working in browser |
+| **4** | React Fundamentals | 5-7 practice components | Understand JSX, props |
+| **5** | State (useState, useReducer) | Task manager | Basic but functional |
+| **6** | useEffect + API Calls | Weather/movie app using free API | Displays real data |
+| **7** | React Router + Forms | Multi-page app | Routing works |
+| **8** | Next.js Intro | Simple portfolio site | Deployed to Vercel |
+| **9** | Database (PostgreSQL + Prisma) | Add database to blog | CRUD works |
+| **10** | Authentication | Login/signup on your app | Works, not pretty |
+| **11** | Tailwind CSS | Make everything look decent | Doesn't need to be perfect |
+| **12** | Testing Basics | 5-10 tests on your app | Understand the concept |
+| **13** | Phase Review | Clean up 2-3 best projects | Phase 1 complete |
+
+### Reality Check
+
+```
+WHAT I CHANGED FROM THE OVERAMBITIOUS VERSION:
+├── TypeScript: Basics only (no generics yet)
+├── Auth: "Works, not pretty" — auth is genuinely hard
+├── Testing: Just understand the concept, don't aim for 80% coverage
+├── DELETED: "Publish npm package" — nobody needs this as a beginner
+├── DELETED: "Storybook docs" — nice to have, not need to have
+├── DELETED: "Redesign ALL apps" — just make them decent
+
+WHAT YOU SHOULD HAVE:
+├── 2-3 apps that work (even if ugly)
+├── 1 app deployed to the internet
+├── Basic understanding of React, TypeScript, Next.js
+└── A sense of what you DON'T know yet (most important)
+```
+
+### Resources
+
+| Topic | Resource | Link | Priority |
+|-------|----------|------|----------|
+| **HTML & CSS** | The Odin Project — Foundations | theodinproject.com/paths/full-stack-javascript/courses/foundations | Core (Week 1-2) |
+| **HTML/CSS Reference** | MDN Web Docs — Learn Web Dev | developer.mozilla.org/en-US/docs/Learn_web_development | Reference (always) |
+| **CSS Visual/Deep Dive** | Kevin Powell (YouTube) | youtube.com/@KevinPowell | Core (Week 2, 11) |
+| **JavaScript** | javascript.info | javascript.info | Core (Week 3) |
+| **TypeScript** | Total TypeScript — Beginners | totaltypescript.com/tutorials/beginners-typescript | Core (Week 3) |
+| **React** | React.dev (Official Docs) | react.dev/learn | Core (Week 4-7) |
+| **Next.js** | Next.js Official Tutorial | nextjs.org/learn | Core (Week 8) |
+| **Tailwind CSS** | Tailwind Official Docs | tailwindcss.com/docs | Core (Week 11) |
+
+### Resource Strategy
+
+```
+PRIMARY PATH (follow in order):
+  Week 1-2:  The Odin Project → Foundations course
+             Build the projects. Don't skip exercises.
+  Week 3:    javascript.info → read the relevant chapters
+             THEN Total TypeScript → beginners tutorial
+  Week 4-7:  react.dev/learn → build along with docs
+  Week 8:    nextjs.org/learn → official tutorial
+  Week 11:   Tailwind docs → learn by doing on your projects
+
+REFERENCE (use when stuck, NOT as primary):
+  MDN Web Docs → "how do I center a div?" → look it up here
+  Kevin Powell → CSS concepts you don't understand → watch his video
+  Josh Comeau  → deep CSS dives → joshwcomeau.com/css (supplement only)
+
+DO NOT:
+├── Watch a 40-hour "Full Web Dev Course" on YouTube
+├── Buy a Udemy course before finishing the free resources above
+├── Jump between 5 different React tutorials
+├── Learn CSS from content older than 2024
+└── Skip The Odin Project exercises — they teach you to research,
+     which is the actual skill you need
+```
+
+---
+
+## 🔵 PHASE 2: MOBILE DEVELOPMENT (Weeks 14-26)
+
+### Goal: Build 2-3 mobile apps, understand React Native
+
+### Technology Choice
+
+```
+PRIMARY: React Native + Expo
+├── React skills from Phase 1 transfer directly (~80% overlap)
+├── One codebase → iOS + Android
+├── Indonesia: Android is 80%+ of market
+└── Fastest path to a working app on your phone
+
+NATIVE TOUCH: Optional, pick ONE based on what device you own
+├── Have iPhone/Mac? → Learn SwiftUI
+├── Have Android? → Learn Kotlin + Jetpack Compose
+├── Have neither? → Skip native this year. Learn it later when needed.
+└── DO NOT try to learn both Swift AND Kotlin. That's too much.
+```
+
+### React Native + Expo (Weeks 14-22)
+
+| Week | Topic | Project | Deliverable |
+|------|-------|---------|-------------|
+| **14** | RN Fundamentals + Expo | First app on your phone | Running on real device |
+| **15** | Core Components + Navigation | Multi-screen app | Navigation works |
+| **16** | State (Zustand) + Storage | App with persistent state | State survives restart |
+| **17** | Device APIs (Camera, Location) | Photo journal | Camera/location works |
+| **18** | API Integration | App fetching real data | Data displayed properly |
+| **19** | Push Notifications (optional) | Simple notification demo | Understand the flow |
+| **20** | Build for Production | Build APK or IPA | Installable file |
+| **21** | App Store Submission (OPTIONAL) | Try submitting to 1 store | Learn the process |
+| **22** | Phase Review | Clean up best mobile project | Phase 2 complete |
+
+### Honest Notes About App Store Publishing
+
+```
+WHY I MADE THIS OPTIONAL:
+
+APPLE APP STORE:
+├── $99/year (~Rp 1.5 juta) — RECURRING cost
+├── Requires Mac for final build steps
+├── Review takes 24-48 hours, rejection is common
+└── Many first submissions get rejected 2-3 times
+
+GOOGLE PLAY STORE:
+├── $25 one-time (~Rp 375 ribu)
+├── More lenient but still requires polish + privacy policy
+└── Takes 3-7 days for first review
+
+WHAT TO DO INSTEAD:
+├── Focus on building a WORKING app (that's the real skill)
+├── If you have budget + Mac → try publishing to ONE store
+├── If not → share APK/TestFlight with friends and family
+└── For portfolio: a 2-minute demo video is ENOUGH proof
+```
+
+### Native Touch — Pick ONE (Weeks 23-26)
+
+| If You Have iPhone/Mac | If You Have Android |
+|----------------------|-------------------|
+| Week 23: Swift Basics | Week 23: Kotlin Basics |
+| Week 24: SwiftUI Basics | Week 24: Jetpack Compose Basics |
+| Week 25: Build simple app | Week 25: Build simple app |
+| Week 26: Review + compare with RN | Week 26: Review + compare with RN |
+
+### Resources
+
+| Topic | Resource | Link | Priority |
+|-------|----------|------|----------|
+| **React Native** | React Native Official Docs | reactnative.dev/docs/getting-started | Core (Week 14-15) |
+| **Expo** | Expo Official Docs + Tutorial | docs.expo.dev | Core (Week 14-18) |
+| **Navigation** | Expo Router Docs | expo.dev/router | Core (Week 15) |
+| **State Management** | Zustand Docs | docs.pmnd.rs/zustand | Core (Week 16) |
+| **Device APIs** | Expo API Docs | docs.expo.dev/versions/latest | Reference (Week 17) |
+| **Swift/iOS** | 100 Days of SwiftUI (Paul Hudson) | hackingwithswift.com/100/swiftui | If iOS (Week 23-26) |
+| **Kotlin/Android** | Android Basics w/ Compose (Google) | developer.android.com/courses/pathways/android-basics-compose | If Android (Week 23-26) |
+
+### Resource Strategy
+
+```
+PRIMARY PATH:
+  Week 14-15: React Native docs → Expo docs
+              Build your first app on your phone. Nothing else.
+  Week 16:    Zustand docs → state management
+  Week 17-18: Expo API docs → camera, location, storage
+  Week 19-20: Expo build docs → production build
+
+NATIVE (pick ONE if you have the device):
+  iOS:  100 Days of SwiftUI → Days 1-30 minimum
+        This is THE definitive free SwiftUI course. No alternative needed.
+  Android: Google's official Android Basics with Compose
+           Codelab format. Hands-on. No fluff.
+
+DO NOT:
+├── Learn both Swift AND Kotlin — pick the device you own
+├── Use React Native CLI before trying Expo
+├── Watch outdated RN tutorials (pre-2024) — Expo changed significantly
+└── Skip building on a real device — simulators lie
+```
+
+---
+
+## 🟣 PHASE 3: BACKEND + AI BASICS (Weeks 27-35)
+
+### Goal: Understand backend engineering, build something with AI
+
+### Why Backend After Frontend + Mobile
+
+```
+You need to know WHAT the backend serves before you build it.
+Frontend taught you UI/UX. Mobile taught you constraints.
+Now backend makes sense.
+
+Your OSN background already gave you:
+├── Algorithms, complexity, data structures
+├── Graph problems, optimization, DP
+└── Backend is mostly data modeling + API design + scaling
+    Your gap is engineering practices, not algorithmic thinking.
+```
+
+### Backend (Weeks 27-31)
+
+| Week | Topic | Project | Deliverable |
+|------|-------|---------|-------------|
+| **27** | Node.js + Event Loop | CLI tool (file organizer) | Works on your machine |
+| **28** | Express.js + REST API | API for your mobile app | CRUD endpoints working |
+| **29** | PostgreSQL + Prisma | Database schema | Schema design makes sense |
+| **30** | Auth (JWT + OAuth) | Login flow | Secure-ish |
+| **31** | Docker Basics | Dockerize your app | `docker compose up` works |
+
+### AI Basics (Weeks 32-35)
+
+| Week | Topic | Project | Deliverable |
+|------|-------|---------|-------------|
+| **32** | AI For Everyone (Andrew Ng) | — | Understand AI landscape |
+| **33** | OpenAI API + Prompt Engineering | AI CLI assistant | Actually useful, not toy |
+| **34** | RAG + Vector DBs | Knowledge base app | RAG pipeline works |
+| **35** | Phase Review | Connect backend + AI | Phase 3 complete |
+
+### Resources
+
+| Topic | Resource | Link | Priority |
+|-------|----------|------|----------|
+| **Node.js** | The Odin Project — Node.js Course | theodinproject.com/paths/full-stack-javascript/courses/nodejs | Core (Week 27-28) |
+| **Express.js** | Express Official Docs + Odin Project | expressjs.com + theodinproject.com | Core (Week 28) |
+| **PostgreSQL** | PostgreSQLTutorial (free) | postgresqltutorial.com | Core (Week 29) |
+| **Prisma ORM** | Prisma Official Docs | prisma.io/docs | Core (Week 29) |
+| **Auth (JWT/OAuth)** | The Odin Project — Auth section | theodinproject.com | Core (Week 30) |
+| **Docker** | Docker — Get Started (Official) | docs.docker.com/get-started | Core (Week 31) |
+| **Docker Compose** | Docker Compose Docs | docs.docker.com/compose | Core (Week 31) |
+| **AI Overview** | AI For Everyone (Andrew Ng, Coursera) | coursera.org/learn/ai-for-everyone | Core (Week 32) |
+| **OpenAI API** | OpenAI Platform Docs | platform.openai.com/docs | Core (Week 33) |
+| **RAG + Vector DBs** | LangChain Docs + Pinecone Learn | python.langchain.com/docs + pinecone.io/learn | Core (Week 34) |
+
+### Resource Strategy
+
+```
+BACKEND (Week 27-31):
+  Week 27-28: The Odin Project Node.js course
+              THEN Express docs for routing/middleware patterns
+  Week 29:    PostgreSQLTutorial.com → SQL basics
+              THEN Prisma docs → ORM patterns
+  Week 30:    Odin Project auth section → understand JWT + OAuth
+  Week 31:    Docker official get-started → containerize your app
+              Just understand: image, container, compose. That's enough.
+
+AI (Week 32-35):
+  Week 32:    AI For Everyone (Andrew Ng) → 4 hours, audit free on Coursera
+  Week 33:    OpenAI docs → build a CLI tool that uses the API
+  Week 34:    Pinecone "Learn RAG" guides → build a knowledge base app
+  Week 35:    Review + connect everything
+
+DO NOT:
+├── Take a paid Node.js course — Odin Project covers it free
+├── Learn Docker Compose before understanding single Docker files
+├── Jump into ML math before understanding what AI CAN and CANNOT do
+├── Use outdated auth tutorials (pre-2024) — OAuth patterns changed
+└── Build your own auth from scratch — use established libraries
+```
+
+### What AI Cannot Replace You For
+
+```
+AI CANNOT:
+  ├─ Decide WHEN to use AI vs. rule-based vs. human judgment
+  ├─ Design system architecture (speed vs. scalability tradeoffs)
+  ├─ Evaluate AI output quality and detect bias
+  ├─ Align technical decisions with business/user goals
+  ├─ Communicate AI limitations to non-technical people
+  └─ Take responsibility when AI makes mistakes
+
+FOCUS ON THESE, NOT JUST "CALLING OPENAI API."
+```
+
+---
+
+## 🟠 PHASE 4: ONE CAPSTONE (Weeks 36-46)
+
+### Goal: Build ONE capstone project you're genuinely proud of
+
+```
+WHY ONE, NOT THREE:
+
+├── One GREAT project beats three mediocre ones every time.
+├── Three capstones in 10 weeks = 3 weeks each = all half-baked.
+├── One capstone in 10 weeks = time to iterate, get feedback, polish.
+└── University admissions and hiring managers look for DEPTH, not breadth.
+
+WHAT MAKES A GOOD CAPSTONE:
+├── Solves a REAL problem (even a small one)
+├── Has REAL users (even 5-10 people count)
+├── You can explain the architecture clearly
+├── You can discuss what you'd improve with more time
+└── Uses skills from Phase 1 + 2 + 3 together
+```
+
+### Timeline
+
+| Week | Focus | Deliverable |
+|------|-------|-------------|
+| **36** | Pick idea + write SPEC.md | Problem, features, tech stack |
+| **37-38** | Build MVP | Core functionality works |
+| **39-40** | Add AI feature (if relevant) | Or drop it if not needed |
+| **41-42** | Get 5-10 people to use it | User feedback, bug list |
+| **43-44** | Fix bugs + polish | Improved version |
+| **45** | Write documentation | README with architecture + learnings |
+| **46** | Record 2-3 min demo video | Portfolio-ready showcase |
+
+### Realistic Capstone Ideas (Pick ONE)
+
+#### Idea A: Study Group Platform (Leverages OSN Background)
+
+```
+PROBLEM: Students study alone. No good platform for Indonesian
+         students to form study groups and share materials.
+
+MVP (4 weeks):
+  ├─ User accounts + login
+  ├─ Create/join study groups
+  ├─ Share notes in groups
+  ├─ Simple discussion forum
+  └─ Web + mobile (React Native)
+
+STRETCH (if time):
+  ├─ AI study recommendations
+  ├─ Flashcard system with spaced repetition
+  └─ OSN-style problem bank with auto-grading
+
+REALISTIC IMPACT:
+  ├─ 10-30 active users (friends, OSN peers)
+  ├─ 50+ notes/materials shared
+  └─ User feedback (WhatsApp messages saying "thanks" counts)
+
+WHY THIS IS GOOD:
+  └─ Uses everything you learned. Real users you can actually find.
+```
+
+#### Idea B: Tool for Your Community
+
+```
+PROBLEM: Pick a community you're in. What tool do they need?
+
+EXAMPLES:
+  ├─ Event management for school club
+  ├─ Task tracker for OSN training team
+  ├─ Lab computer scheduling system
+  └─ Textbook/equipment marketplace
+
+MVP:
+  ├─ User accounts
+  ├─ Core feature solving the problem
+  ├─ Mobile-friendly
+  └─ 5+ real people using it
+
+REALISTIC IMPACT:
+  └─ "Built X that Y people in my community use daily."
+     This is MORE compelling than "1000 users" that's clearly inflated.
+```
+
+#### Idea C: Personal Tool That Became Public
+
+```
+PROBLEM: Build for YOURSELF first. If others find it useful, share.
+
+EXAMPLES:
+  ├─ Study scheduler with exam countdown
+  ├─ Code snippet manager with search
+  ├─ Habit tracker for students
+  └─ Personal finance tracker
+
+MVP:
+  ├─ Core feature solving YOUR problem
+  ├─ Works on web and/or mobile
+  └─ You use it for 2+ weeks
+
+REALISTIC IMPACT:
+  └─ "Built X for myself, shared with Y friends, we all use it."
+     Authenticity > inflated numbers.
+```
+
+---
+
+# 📅 YEAR 2: SURVIVE CS YEAR 1 + FIRST INCOME
+
+> **Goal: Survive first year of university, earn first income, figure out priorities**
+
+### The Truth About Indonesian University
+
+```
+WHAT NOBODY TELLS YOU:
+
+1. Attendance is MANDATORY in most Indonesian universities.
+   You CANNOT skip class to code. Some classes are useless
+   for your goals but you MUST attend. Accept this.
+
+2. First semester GPA will be LOWER than you expect.
+   You're adjusting to university life, new social environment,
+   and courses unrelated to coding (civics, religion, English,
+   math you forgot from high school).
+
+3. Finding freelance clients is HARD.
+   Most "freelance" income comes from: friends needing websites,
+   small local businesses, or platforms like Projects.co.id.
+   Upwork is EXTREMELY competitive for beginners.
+
+4. You will have LESS time to code than you think.
+   Indonesian CS programs: 20-25 hours/week of classes,
+   plus assignments, group projects, commuting.
+   Your coding time might drop to 5-8 hours/week.
+
+5. CP + full-stack + AI + freelance all at once is NOT FEASIBLE.
+   You must PRIORITIZE. Pick 2, not 4.
+```
+
+### Realistic Quarterly Breakdown
+
+```
+Q1 (Months 13-15) — SURVIVE FIRST SEMESTER:
+  ├─ University: Focus on surviving. Target: 3.3+ GPA. NOT 3.8.
+  ├─ Coding: 30 min-1 hour/day minimum to maintain skills.
+  ├─ CP: 1 contest every 2 weeks if time allows.
+  └─ Freelance: Don't stress this yet. Adjust to university first.
+
+Q2 (Months 16-18) — FIRST SEMESTER RESULTS:
+  ├─ University: First GPA comes out. Adjust study habits.
+  ├─ Coding: Now look for freelance. Ask: does any club need a website?
+  ├─ Income: Rp 0-3 juta for your first project is realistic.
+  └─ CP: 1 contest/week if time allows.
+
+Q3 (Months 19-21) — SEMESTER 2:
+  ├─ University: Target 3.5+ semester GPA.
+  ├─ Coding: Deliver freelance project well, or build for learning.
+  ├─ Income: Rp 2-5 juta if you land 1-2 projects.
+  └─ Network: Join tech community at university.
+
+Q4 (Months 22-24) — SUMMER BREAK (BEST CODING TIME):
+  ├─ 2-3 months with fewer classes. GOLDEN TIME.
+  ├─ Build 1 significant project.
+  ├─ Apply to local startups for internship.
+  │   Target: ANY tech internship, not big names yet.
+  ├─ Internship salary: Rp 2-5 juta/month (Indonesian standard).
+  └─ ICPC: Participate if your university competes.
+```
+
+### Income Reality (Indonesian Market)
+
+```
+FREELANCE:
+├─ Landing page / company profile: Rp 1-3 juta
+├─ Web app with database: Rp 3-8 juta
+├─ Full-stack + mobile: Rp 8-20 juta (RARE for students)
+├─ 1-2 projects/semester is realistic
+└─ Monthly average: Rp 0-5 juta (lumpy, not steady)
+
+INTERNSHIP:
+├─ Indonesian startups: Rp 2-5 juta/month
+├─ Unicorns (well-funded): Rp 5-8 juta/month
+├─ Remote for foreign company: $300-800/month (much harder to get)
+└─ Duration: 3-6 months typically
+
+MICRO-SAAS:
+├─ Honestly? Probably Rp 0 in Year 2.
+├─ Building a product people PAY for is HARD.
+└─ Try it, but don't count on it for income.
+
+REALISTIC TOTAL YEAR 2 INCOME:
+├─ Freelance: Rp 5-15 juta total (1-3 projects across the year)
+├─ Internship: Rp 6-30 juta (if you get one)
+└─ TOTAL: Rp 5-30 juta for the ENTIRE YEAR
+   (Monthly average: Rp 400 ribu - 2.5 juta)
+
+THIS IS FINE. Year 2 is for learning, not getting rich.
+```
+
+### Competitive Programming: Should You Continue?
+
+```
+YES, IF:
+├── You enjoy it (not just for resume)
+├── You can spare 4-6 hours/week (not 10-15)
+├── Your university has an ICPC team
+└── You want to keep FAANG doors open (CP = interview prep)
+
+NO, IF:
+├── You barely passed OSN and hated it
+├── Your GPA is suffering
+├── You'd rather focus on development
+└── You don't have a team for ICPC
+
+REALISTIC SCHEDULE (4-6 hours/week):
+├─ 1 contest every 1-2 weeks (2 hours)
+├─ 1 practice session on weak topics (1.5 hours)
+├─ Review mistakes (30 min)
+└─ Total: ~4-6 hours/week
+
+REALISTIC TARGETS:
+├─ Maintain current rating (don't drop)
+├─ If Specialist: try Expert (1600+)
+├─ If Expert: try Candidate Master (1900+)
+├─ LeetCode: 100-200 problems by end of Year 2
+└─ ICPC: Participate. Medal is bonus, not requirement.
+```
+
+### Priority Order for Year 2
+
+```
+1. University GPA (3.5+ target) — opens internship/scholarship doors
+2. Core dev skills (1 side project/semester minimum)
+3. CP (if you enjoy it, 4-6 hrs/week)
+4. Income (freelance/internship — nice to have, not required)
+5. AI/ML learning (1 course over the year is enough)
+```
+
+---
+
+# 📅 YEAR 3: INTERNSHIP HUNT + CS YEAR 2
+
+> **Goal: Get a REAL internship, build system design skills**
+
+### FAANG Internship Reality for Indonesian Students
+
+```
+THE TRUTH:
+
+Programs like Google STEP, Meta University Intern, Apple Intern
+are designed for US/Canada students at top-tier universities.
+Most require work authorization in those countries.
+
+For an Indonesian student at an Indonesian university:
+├─ Google Indonesia DOES hire interns (5-15/year estimated)
+├─ TikTok Indonesia DOES hire interns
+├─ Meta, Apple, Netflix — NO Indonesia offices
+├─ Interning abroad requires visa sponsorship (very rare for interns)
+└─ Most common path: local tech → FAANG full-time after graduation
+
+REALISTIC TARGETS:
+├─ Tier 1: Google Indonesia, TikTok Indonesia
+├─ Tier 2: GoTo, Traveloka, Bukalapak, Shopee
+├─ Tier 3: Mid-size startups with good engineering teams
+├─ Tier 4: ANY tech company where you'll learn a lot
+└─ ALL of these can lead to FAANG later. Just takes longer.
+```
+
+### Quarterly Breakdown
+
+```
+Q1 (Months 25-27) — SEMESTER 3:
+  ├─ University: OS, Networks, Databases — ACTUALLY useful courses.
+  ├─ GPA: 3.5+ target.
+  ├─ LeetCode: Start (1-2 problems/day, 30 min each).
+  ├─ System Design: ByteByteGo course (1 video/week).
+  └─ Network: Attend tech meetups if available.
+
+Q2 (Months 28-30) — INTERNSHIP APPLICATIONS + SUMMER:
+  ├─ Apply to 10-20 positions.
+  │   Expect 2-5 responses. Expect 1-2 interviews.
+  │   0 responses = resume needs work.
+  ├─ LeetCode: 150-250 total. Focus on easy + medium.
+  ├─ If you get internship: focus there.
+  ├─ If not: build project, contribute to OSS, or freelance.
+  └─ System Design: Continue ByteByteGo.
+
+Q3 (Months 31-33) — SEMESTER 4:
+  ├─ University: Continue strong.
+  ├─ If interning: do great work, get return offer or reference.
+  ├─ If not: build 1 substantial project.
+  ├─ LeetCode: 250-350 total. Medium consistently.
+  └─ Open Source: Contribute to 1 project you use.
+
+Q4 (Months 34-36) — SUMMER YEAR 3:
+  ├─ BEST summer for internship applications.
+  ├─ Apply EARLY (many open July-September for next summer).
+  ├─ Target bigger companies this time.
+  ├─ LeetCode: 300-400 total.
+  ├─ System Design: Read DDIA (first half).
+  └─ Consider: would grad school abroad be valuable?
+```
+
+### LeetCode Reality
+
+```
+MONTHLY PRACTICE (YEAR 3):
+├─ 15-20 problems/month (per MONTH, not per week)
+├─ Mix: 60% Medium, 20% Easy (warmup), 20% Hard (stretch)
+├─ Focus on patterns:
+│   Two Pointers, Sliding Window, BFS/DFS, Binary Search,
+│   Dynamic Programming, Backtracking, Heap/Stack
+└─ 30-45 min/problem max. If stuck, study solution, redo next week.
+
+"READY FOR INTERVIEW" LOOKS LIKE:
+├─ LeetCode Medium in 25-30 min
+├─ LeetCode Easy in 10-15 min
+├─ Can explain solution out loud while coding
+└─ 300+ problems solved with understanding (not memorizing)
+```
+
+---
+
+# 📅 YEAR 4: DEPTH + LEADERSHIP + CS YEAR 3
+
+> **Goal: Strong internship, open source presence, prep for full-time**
+
+### Quarterly Breakdown
+
+```
+Q1 (Months 37-39):
+  ├─ University: Advanced courses (distributed systems, AI/ML electives).
+  ├─ Internship: Return to previous company or aim higher.
+  ├─ LeetCode: 400-500 total. Medium consistently, occasional Hard.
+  ├─ System Design: DDIA complete + mock interviews.
+  └─ Open Source: Lead a feature or maintain a small project.
+
+Q2 (Months 40-42):
+  ├─ Full-time applications start (Aug-Oct cycle for next year).
+  ├─ Apply to 20-30 companies.
+  ├─ Interview prep: 500+ LeetCode, system design mocks.
+  ├─ Behavioral: 15 STAR-method stories prepared.
+  └─ If considering grad school: start applications.
+
+Q3 (Months 43-45):
+  ├─ Interview season (onsites, final rounds).
+  ├─ Evaluate offers (salary, team, location, growth).
+  ├─ Capstone: Lead final year project (team of 4).
+  └─ Tech talk at conference or meetup (build personal brand).
+
+Q4 (Months 46-48):
+  ├─ Transition prep for full-time role.
+  ├─ Build 6-month emergency fund.
+  ├─ Network with engineers at target companies.
+  └─ Rest 2-4 weeks before the next chapter.
+```
+
+### Interview Preparation
+
+```
+CODING (6 months prep minimum):
+├─ Months 1-2: LeetCode patterns (Blind 75 / NeetCode 150)
+├─ Months 3-4: Timed practice, company-specific patterns
+├─ Months 5-6: Mock interviews (3/week minimum)
+└─ Target: 400-600 problems total with deep understanding
+
+SYSTEM DESIGN (3 months prep):
+├─ Month 1: DDIA + ByteByteGo advanced sections
+├─ Month 2: Practice 2 systems/week with timer
+├─ Month 3: Mock interviews with senior engineers
+└─ Target: Can design standard systems with tradeoff analysis
+
+BEHAVIORAL (1 month prep):
+├─ 15 STAR-method stories
+├─ Practice with friends or Pramp
+└─ Research company values
+
+TARGET COMPANIES (Tiered):
+├─ Tier 1: Google Indonesia, TikTok, Grab
+├─ Tier 2: GoTo, Traveloka, Shopee, Bukalapak
+├─ Tier 3: Mid-size startups with good engineering
+├─ Tier 4 (if considering abroad): FAANG Singapore offices
+└─ Apply broadly. Don't put all eggs in one basket.
+```
+
+---
+
+# 📅 YEAR 5: CAREER ENTRY
+
+> **Goal: Start your career — FAANG, startup, or grad school**
+
+### Path A: Big Tech Engineer
+
+```
+MONTHS 49-51 (FIRST MONTHS ON THE JOB):
+  ├─ Learn codebase, build relationships.
+  ├─ Ship first PR within 2 weeks (even if small).
+  ├─ Understand team processes.
+  └─ Set 6-month goals with manager.
+
+CAREER TRAJECTORY:
+  Year 5:     L3 / E3 (Entry-level)
+  Year 7-8:   L4 / E4 (Mid-level)
+  Year 10-12: L5 / E5 (Senior)
+  Year 15+:   L6+ (Staff) OR management
+
+SALARY (Indonesian market): Rp 15-40 juta/month entry
+SALARY (Singapore FAANG): Rp 50-100 juta/month entry
+SALARY (US FAANG): Rp 150-300 juta/month entry
+(The location matters enormously. This is why some engineers relocate.)
+```
+
+### Path B: Startup
+
+```
+REQUISITES:
+  ├─ 2+ shipped products with real users
+  ├─ Network of potential co-founders
+  ├─ Technical breadth (can build any part)
+  ├─ Business understanding (revenue, CAC, LTV)
+  └─ Risk tolerance + 6-month financial runway
+
+REALITY:
+  ├─ Build MVP in 4-6 weeks
+  ├─ Get first 100 users in month 2
+  ├─ If traction: raise pre-seed or bootstrap
+  ├─ If no traction: pivot or take full-time job (no shame)
+  └─ Most first-time startups fail. This is NORMAL.
+```
+
+### Path C: Grad School
+
+```
+IF YOU WANT MS/PhD:
+  ├─ Target: Top 20-50 CS programs
+  ├─ Requirements: 3.5+ GPA, research experience, strong LoRs
+  ├─ Start applications Month 43, submit Month 45
+  └─ Outcomes: research scientist, specialized engineering roles, or PhD
+```
+
+---
+
+# 📚 RESOURCES (Curated, Not a Link Dump)
+
+### Selection Rules
+
+```
+1. MAX 3 resources per category. Not 10. Not 15. Three.
+2. Free or free-tier first. Only pay if it's genuinely worth it.
+3. Updated for 2026. If the content hasn't been updated since 2023, skip it.
+4. Credible authors/instructors. Known in the industry.
+5. ONE at a time. Finish one before starting the next.
+```
+
+---
+
+## Web Development
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **React.dev — Learn** (react.dev/learn) | Official, interactive, covers modern React with hooks and Server Components. Best starting point. | Free | Phase 1 |
+| 2 | **Next.js Learn** (nextjs.org/learn) | Official tutorial. Covers App Router, Server Actions, deployment. | Free | Phase 1 |
+| 3 | **Total TypeScript** (Matt Pocock) — Beginner + Intermediate tracks | Best TypeScript teacher alive. Practical, not academic. | Free (YT) / Paid (pro) | Phase 1 |
+
+> Skip: Udemy React courses (outdated fast), W3Schools (too shallow), freeCodeCamp React cert (outdated curriculum).
+
+---
+
+## Mobile Development
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **Expo Docs + Tutorial** (docs.expo.dev) | Official. Fastest path to a running app. Updated with SDK 52+. | Free | Phase 2 |
+| 2 | **React Native Express** (reactnative.express) | Concise, covers RN-specific concepts (Flexbox differences, navigation, native modules). | Free | Phase 2 |
+| 3 | **100 Days of SwiftUI** (Paul Hudson, Hacking with Swift) — IF you have Mac | Best free iOS course. Updated for Swift 6 / iOS 18. Only do if you own Apple hardware. | Free | Phase 2 (optional) |
+
+> Skip: Generic "React Native Course" on Udemy (mostly outdated class components), Angular/Ionic (wrong ecosystem for your goals).
+
+---
+
+## Backend Engineering
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **Express.js Official Guide** (expressjs.com) + **Node.js Docs** (nodejs.org/en/learn) | Official docs are the best resource for Node.js/Express. Read the "Getting Started" + "Guide" sections. | Free | Phase 3 |
+| 2 | **Prisma Docs** (prisma.io/docs) + **PostgreSQL Tutorial** (postgresqltutorial.com) | Prisma docs are excellent. PostgreSQL Tutorial is the best free SQL resource. | Free | Phase 3 |
+| 3 | **Docker — TechWorld with Nana** (YouTube: "Docker Crash Course for Beginners") | Best free Docker intro. 3 hours. Covers containers, volumes, compose. | Free | Phase 3 |
+
+> Skip: "Node.js Design Patterns" book (too advanced for Year 1), microservices courses (you don't need this yet — monolith first).
+
+---
+
+## AI / Machine Learning
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **AI For Everyone** (Andrew Ng, DeepLearning.AI, Coursera) | 4 hours. Non-technical. Teaches what AI can/cannot do, business implications. Everyone should take this first. | Free (audit) | Phase 3 |
+| 2 | **Kaggle Learn — Intro to Machine Learning** (kaggle.com/learn) | Hands-on, browser-based, real datasets. 6 hours. Build your first ML model immediately. | Free | Year 2 |
+| 3 | **Generative AI with LLMs** (DeepLearning.AI, Coursera) | Covers embeddings, RAG, fine-tuning. By the team building the actual technology. | Free (audit) | Year 3 |
+
+> Skip: fast.ai (too math-heavy for beginners), generic "AI with Python" YouTube playlists (mostly outdated), LangChain docs (learn fundamentals first, frameworks later).
+
+---
+
+## System Design
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **ByteByteGo** (bytebytego.com, Alex Xu) | Visual, digestible, used by engineers at FAANG. Covers all standard interview patterns. | Free (YT) / Paid (course) | Year 3 |
+| 2 | **Designing Data-Intensive Applications** (Martin Kleppmann) | The bible of distributed systems. Read chapters 1-6 in Year 3, rest in Year 4. | ~Rp 500K (book) | Year 3-4 |
+| 3 | **System Design Primer** (github.com/donnemartin/system-design-primer) | Free, comprehensive GitHub repo. Use as reference, not a course. | Free | Year 3-4 |
+
+> Skip: "Grokking the System Design Interview" (ByteByteGo is the updated version), generic system design YouTube videos (too shallow).
+
+---
+
+## Competitive Programming / Interview Prep
+
+| # | Resource | Why | Cost | When |
+|---|----------|-----|------|------|
+| 1 | **NeetCode 150** (neetcode.io) | Curated LeetCode problems with video solutions. Organized by pattern. Updated for 2026. | Free | Year 3 |
+| 2 | **CP-Algorithms** (cp-algorithms.com) | Best reference for algorithms. Clear explanations. Leverages your OSN background. | Free | Ongoing |
+| 3 | **Codeforces** (codeforces.com) | The platform itself is the resource. Contests + problem sets + editorials. | Free | Ongoing |
+
+> Skip: "Cracking the Coding Interview" book (problems are outdated — use NeetCode instead), random LeetCode lists (NeetCode is curated).
+
+---
+
+## Essential Books (Read in This Order)
+
+| # | Book | Author | When | Why |
+|---|------|--------|------|-----|
+| 1 | **The Pragmatic Programmer** (20th Anniversary Ed.) | Hunt & Thomas | Year 1 | Engineering mindset. How to think about code. |
+| 2 | **Clean Code** | Robert C. Martin | Year 1-2 | Writing code that other humans can read. |
+| 3 | **Designing Data-Intensive Applications** | Martin Kleppmann | Year 3 | Distributed systems. The most important book for backend engineers. |
+| 4 | **System Design Interview** Vol 1 & 2 | Alex Xu | Year 4 | FAANG interview prep. Practical and visual. |
+| 5 | **Staff Engineer** | Will Larson | Year 5 | What comes after senior. Leadership without management. |
+
+> Skip: "The Art of Computer Programming" (too academic), "Introduction to Algorithms" (CLRS — good reference, not a cover-to-cover read).
+
+---
+
+## What NOT to Waste Time On
+
+```
+❌ 20+ tutorial projects — 3 solid ones beat 20 tutorial clones
+❌ Certifications (Google, AWS, etc.) — projects > certificates for hiring
+❌ "Learn X in 30 Days" Udemy courses — outdated fast, shallow
+❌ Watching tech YouTubers instead of coding — entertainment ≠ learning
+❌ Arguing about tech choices on Reddit — build, don't debate
+❌ Collecting bookmarks and not using them — use one resource, finish it
+❌ Paying for bootcamps — everything above is free or cheap
+```
